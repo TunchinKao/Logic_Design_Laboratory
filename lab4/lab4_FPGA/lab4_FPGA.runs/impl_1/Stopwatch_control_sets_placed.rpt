@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1.1 (win64) Build 2960000 Wed Aug  5 22:57:20 MDT 2020
-| Date         : Wed Nov 11 10:29:25 2020
+| Date         : Wed Nov 11 14:16:03 2020
 | Host         : LAPTOP-J5R9FCMI running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Stopwatch_control_sets_placed.rpt
 | Design       : Stopwatch
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    12 |
-|    Minimum number of control sets                        |    12 |
+| Total control sets                                       |    14 |
+|    Minimum number of control sets                        |    14 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    34 |
+| Unused register locations in slices containing registers |    46 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    12 |
+| Total control sets |    14 |
 | >= 0 to < 4        |     0 |
-| >= 4 to < 6        |     5 |
-| >= 6 to < 8        |     1 |
+| >= 4 to < 6        |     7 |
+| >= 6 to < 8        |     0 |
 | >= 8 to < 10       |     1 |
 | >= 10 to < 12      |     0 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     1 |
-| >= 16              |     4 |
+| >= 16              |     5 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,10 +58,10 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              11 |            5 |
+| No           | No                    | No                     |              13 |           10 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |             115 |           32 |
-| Yes          | No                    | No                     |              24 |           11 |
+| No           | Yes                   | No                     |             141 |           37 |
+| Yes          | No                    | No                     |              24 |           10 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
@@ -70,21 +70,23 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+----------------+------------------------------------+----------------------------------------------+------------------+----------------+--------------+
-|  Clock Signal  |            Enable Signal           |               Set/Reset Signal               | Slice Load Count | Bel Load Count | Bels / Slice |
-+----------------+------------------------------------+----------------------------------------------+------------------+----------------+--------------+
-|  cd216/CLK     |                                    |                                              |                1 |              4 |         4.00 |
-|  clk_IBUF_BUFG | countit/gene_onetensec/E[0]        |                                              |                1 |              4 |         4.00 |
-|  clk_IBUF_BUFG | countit/gene_onetensec/onetenthsec |                                              |                1 |              4 |         4.00 |
-|  clk_IBUF_BUFG | countit/setup/E[0]                 |                                              |                1 |              4 |         4.00 |
-|  clk_IBUF_BUFG | countit/setup/sec2_reg[3][0]       |                                              |                2 |              4 |         2.00 |
-|  clk_IBUF_BUFG |                                    |                                              |                4 |              7 |         1.75 |
-|  cd216/CLK     | out[7]_i_1_n_0                     |                                              |                6 |              8 |         1.33 |
-|  clk_IBUF_BUFG |                                    | cd216/cnt[15]_i_1_n_0                        |                4 |             15 |         3.75 |
-|  clk_IBUF_BUFG |                                    | extend_r_signal/cnt[24]_i_1_n_0              |                6 |             24 |         4.00 |
-|  clk_IBUF_BUFG |                                    | extend_sp_signal/cnt[24]_i_1__0_n_0          |                6 |             24 |         4.00 |
-| ~clk_IBUF_BUFG |                                    | countit/gene_onetensec/cnt[25]_i_1__0_n_0    |                8 |             26 |         3.25 |
-| ~clk_IBUF_BUFG |                                    | countit/setup/gene_onetensec/cnt[25]_i_1_n_0 |                8 |             26 |         3.25 |
-+----------------+------------------------------------+----------------------------------------------+------------------+----------------+--------------+
++----------------+-------------------------------------------+------------------------------------------+------------------+----------------+--------------+
+|  Clock Signal  |               Enable Signal               |             Set/Reset Signal             | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+-------------------------------------------+------------------------------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG |                                           |                                          |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG | countit/gene_onetensec/clk_10_reg_0[0]    |                                          |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | countit/gene_onetensec/E[0]               |                                          |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | countit/gene_onetensec/sec2_reg[2][0]     |                                          |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | countit/gene_onetensec/secdiv10_reg[2][0] |                                          |                1 |              4 |         4.00 |
+|  cd216/CLK     |                                           |                                          |                2 |              4 |         2.00 |
+| ~clk_IBUF_BUFG |                                           |                                          |                5 |              5 |         1.00 |
+|  cd216/CLK     | out[7]_i_1_n_0                            |                                          |                4 |              8 |         2.00 |
+| ~clk_IBUF_BUFG |                                           | cd216/cnt[15]_i_1_n_0                    |                4 |             15 |         3.75 |
+|  clk_IBUF_BUFG |                                           | extend_sp_signal/cnt[24]_i_1__0_n_0      |                6 |             24 |         4.00 |
+|  clk_IBUF_BUFG |                                           | extend_r_signal/cnt[24]_i_1_n_0          |                6 |             24 |         4.00 |
+| ~clk_IBUF_BUFG |                                           | testclk/cnt[0]_i_1__2_n_0                |                7 |             26 |         3.71 |
+| ~clk_IBUF_BUFG |                                           | countit/gene_onetensec/cnt[0]_i_1__1_n_0 |                7 |             26 |         3.71 |
+| ~clk_IBUF_BUFG |                                           | countit/setup/gene_onetensec/clear       |                7 |             26 |         3.71 |
++----------------+-------------------------------------------+------------------------------------------+------------------+----------------+--------------+
 
 

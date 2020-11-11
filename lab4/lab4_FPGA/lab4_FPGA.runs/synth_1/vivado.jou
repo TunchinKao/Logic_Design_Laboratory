@@ -2,8 +2,8 @@
 # Vivado v2020.1.1 (64-bit)
 # SW Build 2960000 on Wed Aug  5 22:57:20 MDT 2020
 # IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020
-# Start of session at: Wed Nov 11 10:26:25 2020
-# Process ID: 8944
+# Start of session at: Wed Nov 11 14:14:03 2020
+# Process ID: 34424
 # Current directory: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab4/lab4_FPGA/lab4_FPGA.runs/synth_1
 # Command line: vivado.exe -log Stopwatch.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Stopwatch.tcl
 # Log file: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab4/lab4_FPGA/lab4_FPGA.runs/synth_1/Stopwatch.vds

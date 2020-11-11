@@ -1,0 +1,7 @@
+0.7
+2020.1.1
+Aug  5 2020
+23:19:43
+D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab4/lab4_FPGA/lab4_FPGA.sim/sim_1/behav/xsim/glbl.v,1590624368,verilog,,,,glbl,,,,,,,,
+D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab4/lab4_FPGA/lab4_FPGA.srcs/sources_1/new/Lab4_Team10_Stopwatch_fpga.v,1605068629,verilog,,D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab4/lab4_FPGA/lab4_FPGA.srcs/sources_1/new/tb.v,,Clock_Divider_216;Clock_Divider_23;Extend;Stopwatch;clksecdiv_10;counterup;debounce;one_pulse;state_transition,,,,,,,,
+D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab4/lab4_FPGA/lab4_FPGA.srcs/sources_1/new/tb.v,1605067929,verilog,,,,tb,,,,,,,,
