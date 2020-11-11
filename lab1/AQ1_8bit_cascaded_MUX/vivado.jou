@@ -1,0 +1,79 @@
+#-----------------------------------------------------------
+# Vivado v2020.1.1 (64-bit)
+# SW Build 2960000 on Wed Aug  5 22:57:20 MDT 2020
+# IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020
+# Start of session at: Sat Sep 19 16:55:13 2020
+# Process ID: 21060
+# Current directory: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab1/AQ1_8bit_cascaded_MUX
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9536 D:\Computer_Programming\Logic_Designer\LogicDesignLAB\lab1\AQ1_8bit_cascaded_MUX\AQ1_8bit_cascaded_MUX.xpr
+# Log file: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab1/AQ1_8bit_cascaded_MUX/vivado.log
+# Journal file: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab1/AQ1_8bit_cascaded_MUX\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab1/AQ1_8bit_cascaded_MUX/AQ1_8bit_cascaded_MUX.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+launch_simulation
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+launch_simulation
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+launch_simulation
+update_compile_order -fileset sources_1
+launch_simulation
+source Mux_8bits_t.tcl
+add_bp {D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab1/AQ1_8bit_cascaded_MUX/AQ1_8bit_cascaded_MUX.srcs/sources_1/new/Lab1_TeamX_Mux_8bits_t.v} 26
+remove_bps -file {D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab1/AQ1_8bit_cascaded_MUX/AQ1_8bit_cascaded_MUX.srcs/sources_1/new/Lab1_TeamX_Mux_8bits_t.v} -line 26
+save_wave_config {D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab1/AQ1_8bit_cascaded_MUX/Mux_8bits_t_behav.wcfg}
+close_sim
+close_project
+create_project AQ4_8bit_RCA D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab1/AQ4_8bit_RCA -part xc7a35tcpg236-1
+add_files -norecurse D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab1/lab1_Advance_Q_templates/Lab1_TeamX_RippleCarryAdder.v
+update_compile_order -fileset sources_1
+file mkdir D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab1/AQ4_8bit_RCA/AQ4_8bit_RCA.srcs/sources_1/new
+close [ open D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab1/lab1_Advance_Q_templates/Lab1_TeamX_RippleCarryAdder_t.v w ]
+add_files D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab1/lab1_Advance_Q_templates/Lab1_TeamX_RippleCarryAdder_t.v
+update_compile_order -fileset sources_1
+close_project
+open_project D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab1/AQ1_8bit_cascaded_MUX/AQ1_8bit_cascaded_MUX.xpr
+update_compile_order -fileset sources_1
+close_project
+open_project D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab1/AQ4_8bit_RCA/AQ4_8bit_RCA.xpr
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+source Lab1_TeamX_RippleCarryAdder_t.tcl
+close_sim
+launch_simulation
+source Lab1_TeamX_RippleCarryAdder_t.tcl
+close_sim
+launch_simulation
+source Lab1_TeamX_RippleCarryAdder_t.tcl
+close_sim
+launch_simulation
+source Lab1_TeamX_RippleCarryAdder_t.tcl
+close_sim
+launch_simulation
+source Lab1_TeamX_RippleCarryAdder_t.tcl
+save_wave_config {D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab1/AQ4_8bit_RCA/Lab1_TeamX_RippleCarryAdder_t_behav.wcfg}
+close_sim
+close_project
+open_project D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab1/AQ1_8bit_cascaded_MUX/AQ1_8bit_cascaded_MUX.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+launch_simulation
+source Mux_8bits_t.tcl
+save_wave_config {D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab1/AQ1_8bit_cascaded_MUX/Mux_8bits_t_behav1.wcfg}
+close_sim

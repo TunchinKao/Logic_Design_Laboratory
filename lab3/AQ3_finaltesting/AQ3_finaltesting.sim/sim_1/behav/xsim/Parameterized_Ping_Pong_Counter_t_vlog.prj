@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../AQ3_finaltesting.srcs/sources_1/imports/Sources/Lab3_Team10_Parameterized_Ping_Pong_Counter.v" \
+"../../../../AQ3_finaltesting.srcs/sources_1/imports/Sources/Parameterized_Ping_Pong_Counter_t.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

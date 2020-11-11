@@ -1,0 +1,7 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/Lab1_FullAdder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FullAdder
+INFO: [VRFC 10-311] analyzing module XNOR
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/Lab1_Mux_1bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux_1bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/FullAdder_t.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FullAdder_t

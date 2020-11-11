@@ -1,0 +1,7 @@
+Running: xsim.dir/Lab3_AQ1_LSFR_tb_behav/xsimk.exe -simmode gui -wdb Lab3_AQ1_LSFR_tb_behav.wdb -simrunnum 0 -socket 50590
+Design successfully loaded
+Design Loading Memory Usage: 5964 KB (Peak: 5964 KB)
+Design Loading CPU Usage: 31 ms
+Simulation completed
+Simulation Memory Usage: 6656 KB (Peak: 6656 KB)
+Simulation CPU Usage: 31 ms

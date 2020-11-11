@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2020.1.1 (64-bit)
+# SW Build 2960000 on Wed Aug  5 22:57:20 MDT 2020
+# IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020
+# Start of session at: Tue Oct 20 16:18:57 2020
+# Process ID: 20508
+# Current directory: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/Lab3_AQ1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11568 D:\Computer_Programming\Logic_Designer\LogicDesignLAB\lab3\Lab3_AQ1\Lab3_AQ1.xpr
+# Log file: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/Lab3_AQ1/vivado.log
+# Journal file: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/Lab3_AQ1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/Lab3_AQ1/Lab3_AQ1.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source Lab3_AQ1_LSFR_tb.tcl
+save_wave_config {D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/Lab3_AQ1/Lab3_AQ1_LSFR_tb_behav.wcfg}
+close_sim

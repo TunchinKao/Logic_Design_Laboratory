@@ -1,0 +1,912 @@
+#-----------------------------------------------------------
+# Vivado v2020.1.1 (64-bit)
+# SW Build 2960000 on Wed Aug  5 22:57:20 MDT 2020
+# IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020
+# Start of session at: Wed Oct 21 17:00:18 2020
+# Process ID: 9564
+# Current directory: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17656 D:\Computer_Programming\Logic_Designer\LogicDesignLAB\lab3\lab3_AQ2\lab3_AQ2.xpr
+# Log file: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/vivado.log
+# Journal file: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Program_Files/Xilinx/Vivado/2020.1/data/ip'.
+open_project: Time (s): cpu = 00:00:28 ; elapsed = 00:00:10 . Memory (MB): peak = 1029.031 ; gain = 0.000
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Memory_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Memory_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.srcs/sources_1/imports/Ad_Sources/Lab3_TeamX_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.srcs/sources_1/new/Memory_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Memory_tb
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.sim/sim_1/behav/xsim'
+"xelab -wto 5d97fefcfd5c47148bef2ae34e734f2c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Memory_tb_behav xil_defaultlib.Memory_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Program_Files/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 5d97fefcfd5c47148bef2ae34e734f2c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Memory_tb_behav xil_defaultlib.Memory_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Memory
+Compiling module xil_defaultlib.Memory_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Memory_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Memory_tb_behav -key {Behavioral:sim_1:Functional:Memory_tb} -tclbatch {Memory_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1.1
+Time resolution is 1 ps
+source Memory_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ERROR!
+Address at:   0DOUT:   0 but it should be 208ERROR!
+Address at:  42DOUT:  36 but it should be   2ERROR!
+Address at:  43DOUT:   2 but it should be 174ERROR!
+Address at:  14DOUT: 174 but it should be 249ERROR!
+Address at:  92DOUT: 249 but it should be  18ERROR!
+Address at:  26DOUT:  18 but it should be  92ERROR!
+Address at: 125DOUT:  92 but it should be 223ERROR!
+Address at:  67DOUT: 223 but it should be  58ERROR!
+Address at:  86DOUT:  58 but it should be 150ERROR!
+Address at:  78DOUT: 150 but it should be 159ERROR!
+Address at: 103DOUT: 159 but it should be  42ERROR!
+Address at:  10DOUT:  42 but it should be 118ERROR!
+Address at:  54DOUT: 118 but it should be 120ERROR!
+Address at:  56DOUT: 120 but it should be 235ERROR!
+Address at: 121DOUT: 235 but it should be 237ERROR!
+Address at:  56DOUT: 237 but it should be 235ERROR!
+Address at:  20DOUT: 235 but it should be  18ERROR!
+Address at:  19DOUT:  18 but it should be 119ERROR!
+Address at:   4DOUT: 119 but it should be  13ERROR!
+Address at:  89DOUT:  13 but it should be 200ERROR!
+Address at:  91DOUT: 200 but it should be  61ERROR!
+Address at:  77DOUT:  61 but it should be 183ERROR!
+Address at:  89DOUT: 183 but it should be 200ERROR!
+Address at: 109DOUT: 200 but it should be  38ERROR!
+Address at: 118DOUT:  38 but it should be 230ERROR!
+Address at:  74DOUT: 230 but it should be 159ERROR!
+Address at:  54DOUT: 159 but it should be 120ERROR!
+Address at:  21DOUT: 120 but it should be 143ERROR!
+Address at:  70DOUT: 143 but it should be 241ERROR!
+Address at:   4DOUT: 241 but it should be  13ERROR!
+Address at: 119DOUT:  13 but it should be  90ERROR!
+Address at: 105DOUT:  90 but it should be 134ERROR!
+Address at:  71DOUT:   0 but it should be 217ERROR!
+Address at:   8DOUT: 217 but it should be   1ERROR!
+Address at:  90DOUT:   0 but it should be 119xsim: Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 1029.031 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Memory_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1029.031 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Memory_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Memory_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.srcs/sources_1/imports/Ad_Sources/Lab3_TeamX_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.srcs/sources_1/new/Memory_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Memory_tb
+ERROR: [VRFC 10-4982] syntax error near '<=' [D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.srcs/sources_1/new/Memory_tb.v:64]
+WARNING: [VRFC 10-2096] empty statement in sequential block [D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.srcs/sources_1/new/Memory_tb.v:59]
+ERROR: [VRFC 10-2865] module 'Memory_tb' ignored due to previous errors [D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.srcs/sources_1/new/Memory_tb.v:3]
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Memory_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Memory_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.srcs/sources_1/imports/Ad_Sources/Lab3_TeamX_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.srcs/sources_1/new/Memory_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Memory_tb
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.sim/sim_1/behav/xsim'
+"xelab -wto 5d97fefcfd5c47148bef2ae34e734f2c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Memory_tb_behav xil_defaultlib.Memory_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Program_Files/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 5d97fefcfd5c47148bef2ae34e734f2c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Memory_tb_behav xil_defaultlib.Memory_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Memory
+Compiling module xil_defaultlib.Memory_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Memory_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Memory_tb_behav -key {Behavioral:sim_1:Functional:Memory_tb} -tclbatch {Memory_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1.1
+Time resolution is 1 ps
+source Memory_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ERROR!
+Address at:   0DOUT:   0 but it should be 208ERROR!
+Address at:  42DOUT:  36 but it should be   2ERROR!
+Address at:  43DOUT:   2 but it should be 174ERROR!
+Address at:  14DOUT: 174 but it should be 249ERROR!
+Address at:  92DOUT: 249 but it should be  18ERROR!
+Address at:  26DOUT:  18 but it should be  92ERROR!
+Address at: 125DOUT:  92 but it should be 223ERROR!
+Address at:  67DOUT: 223 but it should be  58ERROR!
+Address at:  86DOUT:  58 but it should be 150ERROR!
+Address at:  78DOUT: 150 but it should be 159ERROR!
+Address at: 103DOUT: 159 but it should be  42ERROR!
+Address at:  10DOUT:  42 but it should be 118ERROR!
+Address at:  54DOUT: 118 but it should be 120ERROR!
+Address at:  56DOUT: 120 but it should be 235ERROR!
+Address at: 121DOUT: 235 but it should be 237ERROR!
+Address at:  56DOUT: 237 but it should be 235ERROR!
+Address at:  20DOUT: 235 but it should be  18ERROR!
+Address at:  19DOUT:  18 but it should be 119ERROR!
+Address at:   4DOUT: 119 but it should be  13ERROR!
+Address at:  89DOUT:  13 but it should be 200ERROR!
+Address at:  91DOUT: 200 but it should be  61ERROR!
+Address at:  77DOUT:  61 but it should be 183ERROR!
+Address at:  89DOUT: 183 but it should be 200ERROR!
+Address at: 109DOUT: 200 but it should be  38ERROR!
+Address at: 118DOUT:  38 but it should be 230ERROR!
+Address at:  74DOUT: 230 but it should be 159ERROR!
+Address at:  54DOUT: 159 but it should be 120ERROR!
+Address at:  21DOUT: 120 but it should be 143ERROR!
+Address at:  70DOUT: 143 but it should be 241ERROR!
+Address at:   4DOUT: 241 but it should be  13ERROR!
+Address at: 119DOUT:  13 but it should be  90ERROR!
+Address at: 105DOUT:  90 but it should be 134ERROR!
+Address at:  71DOUT:   0 but it should be 217ERROR!
+Address at:   8DOUT: 217 but it should be   1ERROR!
+Address at:  90DOUT:   0 but it should be 119xsim: Time (s): cpu = 00:00:08 ; elapsed = 00:00:14 . Memory (MB): peak = 1029.031 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Memory_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:09 ; elapsed = 00:00:22 . Memory (MB): peak = 1029.031 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Memory_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Memory_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.srcs/sources_1/imports/Ad_Sources/Lab3_TeamX_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.srcs/sources_1/new/Memory_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Memory_tb
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.sim/sim_1/behav/xsim'
+"xelab -wto 5d97fefcfd5c47148bef2ae34e734f2c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Memory_tb_behav xil_defaultlib.Memory_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Program_Files/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 5d97fefcfd5c47148bef2ae34e734f2c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Memory_tb_behav xil_defaultlib.Memory_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Memory
+Compiling module xil_defaultlib.Memory_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Memory_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Memory_tb_behav -key {Behavioral:sim_1:Functional:Memory_tb} -tclbatch {Memory_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1.1
+Time resolution is 1 ps
+source Memory_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ERROR!
+Address at:   0 DOUT:   0 but it should be 208
+ERROR!
+Address at:  42 DOUT: 208 but it should be   2
+ERROR!
+Address at:  43 DOUT:   2 but it should be 174
+ERROR!
+Address at:  14 DOUT: 174 but it should be 249
+ERROR!
+Address at:  92 DOUT: 249 but it should be  18
+ERROR!
+Address at:  26 DOUT:  18 but it should be  92
+ERROR!
+Address at: 125 DOUT:  92 but it should be 223
+ERROR!
+Address at:  67 DOUT: 223 but it should be  58
+ERROR!
+Address at:  86 DOUT:  58 but it should be 150
+ERROR!
+Address at:  78 DOUT: 150 but it should be 159
+ERROR!
+Address at: 103 DOUT: 159 but it should be  42
+ERROR!
+Address at:  10 DOUT:  42 but it should be 118
+ERROR!
+Address at:  54 DOUT: 118 but it should be 120
+ERROR!
+Address at:  56 DOUT: 120 but it should be 235
+ERROR!
+Address at: 121 DOUT: 235 but it should be 237
+ERROR!
+Address at:  56 DOUT: 237 but it should be 235
+ERROR!
+Address at:  20 DOUT: 235 but it should be  18
+ERROR!
+Address at:  19 DOUT:  18 but it should be 119
+ERROR!
+Address at:   4 DOUT: 119 but it should be  13
+ERROR!
+Address at:  89 DOUT:  13 but it should be 200
+ERROR!
+Address at:  91 DOUT: 200 but it should be  61
+ERROR!
+Address at:  77 DOUT:  61 but it should be 183
+ERROR!
+Address at:  89 DOUT: 183 but it should be 200
+ERROR!
+Address at: 109 DOUT: 200 but it should be  38
+ERROR!
+Address at: 118 DOUT:  38 but it should be 230
+ERROR!
+Address at:  74 DOUT: 230 but it should be 159
+ERROR!
+Address at:  54 DOUT: 159 but it should be 120
+ERROR!
+Address at:  21 DOUT: 120 but it should be 143
+ERROR!
+Address at:  70 DOUT: 143 but it should be 241
+ERROR!
+Address at:   4 DOUT: 241 but it should be  13
+ERROR!
+Address at: 119 DOUT:  13 but it should be  90
+ERROR!
+Address at: 105 DOUT:  90 but it should be 134
+ERROR!
+Address at:  71 DOUT:   0 but it should be 217
+ERROR!
+Address at:   8 DOUT: 217 but it should be   1
+xsim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:16 . Memory (MB): peak = 1029.031 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Memory_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:24 . Memory (MB): peak = 1029.031 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Memory_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Memory_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.srcs/sources_1/imports/Ad_Sources/Lab3_TeamX_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.srcs/sources_1/new/Memory_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Memory_tb
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.sim/sim_1/behav/xsim'
+"xelab -wto 5d97fefcfd5c47148bef2ae34e734f2c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Memory_tb_behav xil_defaultlib.Memory_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Program_Files/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 5d97fefcfd5c47148bef2ae34e734f2c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Memory_tb_behav xil_defaultlib.Memory_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Memory
+Compiling module xil_defaultlib.Memory_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Memory_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Memory_tb_behav -key {Behavioral:sim_1:Functional:Memory_tb} -tclbatch {Memory_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1.1
+Time resolution is 1 ps
+source Memory_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ERROR!
+Address at:   0 DOUT:   0 but it should be 208
+ERROR!
+Address at:  42 DOUT: 208 but it should be   2
+ERROR!
+Address at:  43 DOUT:   2 but it should be 174
+ERROR!
+Address at:  14 DOUT: 174 but it should be 249
+ERROR!
+Address at:  92 DOUT: 249 but it should be  18
+ERROR!
+Address at:  26 DOUT:  18 but it should be  92
+ERROR!
+Address at: 125 DOUT:  92 but it should be 223
+ERROR!
+Address at:  67 DOUT: 223 but it should be  58
+ERROR!
+Address at:  86 DOUT:  58 but it should be 150
+ERROR!
+Address at:  78 DOUT: 150 but it should be 159
+ERROR!
+Address at: 103 DOUT: 159 but it should be  42
+ERROR!
+Address at:  10 DOUT:  42 but it should be 118
+ERROR!
+Address at:  54 DOUT: 118 but it should be 120
+ERROR!
+Address at:  56 DOUT: 120 but it should be 235
+ERROR!
+Address at: 121 DOUT: 235 but it should be 237
+ERROR!
+Address at:  56 DOUT: 237 but it should be 235
+ERROR!
+Address at:  20 DOUT: 235 but it should be  18
+ERROR!
+Address at:  19 DOUT:  18 but it should be 119
+ERROR!
+Address at:   4 DOUT: 119 but it should be  13
+ERROR!
+Address at:  89 DOUT:  13 but it should be 200
+ERROR!
+Address at:  91 DOUT: 200 but it should be  61
+ERROR!
+Address at:  77 DOUT:  61 but it should be 183
+ERROR!
+Address at:  89 DOUT: 183 but it should be 200
+ERROR!
+Address at: 109 DOUT: 200 but it should be  38
+ERROR!
+Address at: 118 DOUT:  38 but it should be 230
+ERROR!
+Address at:  74 DOUT: 230 but it should be 159
+ERROR!
+Address at:  54 DOUT: 159 but it should be 120
+ERROR!
+Address at:  21 DOUT: 120 but it should be 143
+ERROR!
+Address at:  70 DOUT: 143 but it should be 241
+ERROR!
+Address at:   4 DOUT: 241 but it should be  13
+ERROR!
+Address at: 119 DOUT:  13 but it should be  90
+ERROR!
+Address at: 105 DOUT:  90 but it should be 134
+ERROR!
+Address at:  71 DOUT:   0 but it should be 217
+ERROR!
+Address at:   8 DOUT: 217 but it should be   1
+xsim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 1029.031 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Memory_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:20 . Memory (MB): peak = 1029.031 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Memory_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Memory_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.srcs/sources_1/imports/Ad_Sources/Lab3_TeamX_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.srcs/sources_1/new/Memory_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Memory_tb
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.sim/sim_1/behav/xsim'
+"xelab -wto 5d97fefcfd5c47148bef2ae34e734f2c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Memory_tb_behav xil_defaultlib.Memory_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Program_Files/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 5d97fefcfd5c47148bef2ae34e734f2c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Memory_tb_behav xil_defaultlib.Memory_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Memory
+Compiling module xil_defaultlib.Memory_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Memory_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Memory_tb_behav -key {Behavioral:sim_1:Functional:Memory_tb} -tclbatch {Memory_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1.1
+Time resolution is 1 ps
+source Memory_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ERROR!
+Address at:   0 DOUT:   0 but it should be 208
+ERROR!
+Address at:  42 DOUT:  36 but it should be   2
+ERROR!
+Address at:  43 DOUT:   2 but it should be 174
+ERROR!
+Address at:  14 DOUT: 174 but it should be 249
+ERROR!
+Address at:  92 DOUT: 249 but it should be  18
+ERROR!
+Address at:  26 DOUT:  18 but it should be  92
+ERROR!
+Address at: 125 DOUT:  92 but it should be 223
+ERROR!
+Address at:  67 DOUT: 223 but it should be  58
+ERROR!
+Address at:  86 DOUT:  58 but it should be 150
+ERROR!
+Address at:  78 DOUT: 150 but it should be 159
+ERROR!
+Address at: 103 DOUT: 159 but it should be  42
+ERROR!
+Address at:  10 DOUT:  42 but it should be 118
+ERROR!
+Address at:  54 DOUT: 118 but it should be 120
+ERROR!
+Address at:  56 DOUT: 120 but it should be 235
+ERROR!
+Address at: 121 DOUT: 235 but it should be 237
+ERROR!
+Address at:  56 DOUT: 237 but it should be 235
+ERROR!
+Address at:  20 DOUT: 235 but it should be  18
+ERROR!
+Address at:  19 DOUT:  18 but it should be 119
+ERROR!
+Address at:   4 DOUT: 119 but it should be  13
+ERROR!
+Address at:  89 DOUT:  13 but it should be 200
+ERROR!
+Address at:  91 DOUT: 200 but it should be  61
+ERROR!
+Address at:  77 DOUT:  61 but it should be 183
+ERROR!
+Address at:  89 DOUT: 183 but it should be 200
+ERROR!
+Address at: 109 DOUT: 200 but it should be  38
+ERROR!
+Address at: 118 DOUT:  38 but it should be 230
+ERROR!
+Address at:  74 DOUT: 230 but it should be 159
+ERROR!
+Address at:  54 DOUT: 159 but it should be 120
+ERROR!
+Address at:  21 DOUT: 120 but it should be 143
+ERROR!
+Address at:  70 DOUT: 143 but it should be 241
+ERROR!
+Address at:   4 DOUT: 241 but it should be  13
+ERROR!
+Address at: 119 DOUT:  13 but it should be  90
+ERROR!
+Address at: 105 DOUT:  90 but it should be 134
+ERROR!
+Address at:  71 DOUT:   0 but it should be 217
+ERROR!
+Address at:   8 DOUT: 217 but it should be   1
+xsim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1029.031 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Memory_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 1029.031 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Memory_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Memory_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.srcs/sources_1/imports/Ad_Sources/Lab3_TeamX_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.srcs/sources_1/new/Memory_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Memory_tb
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.sim/sim_1/behav/xsim'
+"xelab -wto 5d97fefcfd5c47148bef2ae34e734f2c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Memory_tb_behav xil_defaultlib.Memory_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Program_Files/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 5d97fefcfd5c47148bef2ae34e734f2c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Memory_tb_behav xil_defaultlib.Memory_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Memory
+Compiling module xil_defaultlib.Memory_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Memory_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Memory_tb_behav -key {Behavioral:sim_1:Functional:Memory_tb} -tclbatch {Memory_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1.1
+Time resolution is 1 ps
+source Memory_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ERROR!
+Address at:   0 DOUT:   0 but it should be 208
+ERROR!
+Address at:  42 DOUT:  36 but it should be   2
+ERROR!
+Address at:  43 DOUT:   2 but it should be 174
+ERROR!
+Address at:  14 DOUT: 174 but it should be 249
+ERROR!
+Address at:  92 DOUT: 249 but it should be  18
+ERROR!
+Address at:  26 DOUT:  18 but it should be  92
+ERROR!
+Address at: 125 DOUT:  92 but it should be 223
+ERROR!
+Address at:  67 DOUT: 223 but it should be  58
+ERROR!
+Address at:  86 DOUT:  58 but it should be 150
+ERROR!
+Address at:  78 DOUT: 150 but it should be 159
+ERROR!
+Address at: 103 DOUT: 159 but it should be  42
+ERROR!
+Address at:  10 DOUT:  42 but it should be 118
+ERROR!
+Address at:  54 DOUT: 118 but it should be 120
+ERROR!
+Address at:  56 DOUT: 120 but it should be 235
+ERROR!
+Address at: 121 DOUT: 235 but it should be 237
+ERROR!
+Address at:  56 DOUT: 237 but it should be 235
+ERROR!
+Address at:  20 DOUT: 235 but it should be  18
+ERROR!
+Address at:  19 DOUT:  18 but it should be 119
+ERROR!
+Address at:   4 DOUT: 119 but it should be  13
+ERROR!
+Address at:  89 DOUT:  13 but it should be 200
+ERROR!
+Address at:  91 DOUT: 200 but it should be  61
+ERROR!
+Address at:  77 DOUT:  61 but it should be 183
+ERROR!
+Address at:  89 DOUT: 183 but it should be 200
+ERROR!
+Address at: 109 DOUT: 200 but it should be  38
+ERROR!
+Address at: 118 DOUT:  38 but it should be 230
+ERROR!
+Address at:  74 DOUT: 230 but it should be 159
+ERROR!
+Address at:  54 DOUT: 159 but it should be 120
+ERROR!
+Address at:  21 DOUT: 120 but it should be 143
+ERROR!
+Address at:  70 DOUT: 143 but it should be 241
+ERROR!
+Address at:   4 DOUT: 241 but it should be  13
+ERROR!
+Address at: 119 DOUT:  13 but it should be  90
+ERROR!
+Address at: 105 DOUT:  90 but it should be 134
+ERROR!
+Address at:  40 DOUT:   0 but it should be  45
+ERROR!
+Address at:  71 DOUT:  45 but it should be 217
+xsim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1029.031 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Memory_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 1029.031 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Memory_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Memory_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.srcs/sources_1/imports/Ad_Sources/Lab3_TeamX_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.srcs/sources_1/new/Memory_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Memory_tb
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.sim/sim_1/behav/xsim'
+"xelab -wto 5d97fefcfd5c47148bef2ae34e734f2c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Memory_tb_behav xil_defaultlib.Memory_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Program_Files/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 5d97fefcfd5c47148bef2ae34e734f2c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Memory_tb_behav xil_defaultlib.Memory_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Memory
+Compiling module xil_defaultlib.Memory_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Memory_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Memory_tb_behav -key {Behavioral:sim_1:Functional:Memory_tb} -tclbatch {Memory_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1.1
+Time resolution is 1 ps
+source Memory_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ERROR!
+Address at:   0 DOUT:   0 but it should be 208
+ERROR!
+Address at:  42 DOUT:  36 but it should be   2
+ERROR!
+Address at:  43 DOUT:   2 but it should be 174
+ERROR!
+Address at:  14 DOUT: 174 but it should be 249
+ERROR!
+Address at:  92 DOUT: 249 but it should be  18
+ERROR!
+Address at:  26 DOUT:  18 but it should be  92
+ERROR!
+Address at: 125 DOUT:  92 but it should be 223
+ERROR!
+Address at:  67 DOUT: 223 but it should be  58
+ERROR!
+Address at:  86 DOUT:  58 but it should be 150
+ERROR!
+Address at:  78 DOUT: 150 but it should be 159
+ERROR!
+Address at: 103 DOUT: 159 but it should be  42
+ERROR!
+Address at:  10 DOUT:  42 but it should be 118
+ERROR!
+Address at:  54 DOUT: 118 but it should be 120
+ERROR!
+Address at:  56 DOUT: 120 but it should be 235
+ERROR!
+Address at: 121 DOUT: 235 but it should be 237
+ERROR!
+Address at:  56 DOUT: 237 but it should be 235
+ERROR!
+Address at:  20 DOUT: 235 but it should be  18
+ERROR!
+Address at:  19 DOUT:  18 but it should be 119
+ERROR!
+Address at:   4 DOUT: 119 but it should be  13
+ERROR!
+Address at:  89 DOUT:  13 but it should be 200
+ERROR!
+Address at:  91 DOUT: 200 but it should be  61
+ERROR!
+Address at:  77 DOUT:  61 but it should be 183
+ERROR!
+Address at:  89 DOUT: 183 but it should be 200
+ERROR!
+Address at: 109 DOUT: 200 but it should be  38
+ERROR!
+Address at: 118 DOUT:  38 but it should be 230
+ERROR!
+Address at:  74 DOUT: 230 but it should be 159
+ERROR!
+Address at:  54 DOUT: 159 but it should be 120
+ERROR!
+Address at:  21 DOUT: 120 but it should be 143
+ERROR!
+Address at:  70 DOUT: 143 but it should be 241
+ERROR!
+Address at:   4 DOUT: 241 but it should be  13
+ERROR!
+Address at: 119 DOUT:  13 but it should be  90
+ERROR!
+Address at: 105 DOUT:  90 but it should be 134
+ERROR!
+Address at:  40 DOUT:   0 but it should be  45
+ERROR!
+Address at:  71 DOUT:  45 but it should be 217
+xsim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1029.031 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Memory_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:14 . Memory (MB): peak = 1029.031 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Memory_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Memory_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.srcs/sources_1/imports/Ad_Sources/Lab3_TeamX_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.srcs/sources_1/new/Memory_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Memory_tb
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.sim/sim_1/behav/xsim'
+"xelab -wto 5d97fefcfd5c47148bef2ae34e734f2c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Memory_tb_behav xil_defaultlib.Memory_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Program_Files/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 5d97fefcfd5c47148bef2ae34e734f2c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Memory_tb_behav xil_defaultlib.Memory_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Memory
+Compiling module xil_defaultlib.Memory_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Memory_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Memory_tb_behav -key {Behavioral:sim_1:Functional:Memory_tb} -tclbatch {Memory_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1.1
+Time resolution is 1 ps
+source Memory_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ERROR!
+Address at:   0 DOUT:  36 but it should be 208
+xsim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1029.031 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Memory_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:18 . Memory (MB): peak = 1029.031 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 21 17:43:07 2020...

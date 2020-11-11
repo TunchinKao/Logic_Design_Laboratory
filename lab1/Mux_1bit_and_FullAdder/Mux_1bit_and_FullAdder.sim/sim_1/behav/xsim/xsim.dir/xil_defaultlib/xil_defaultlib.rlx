@@ -1,0 +1,9 @@
+0.7
+2020.1.1
+Aug  5 2020
+23:19:43
+D:/Computer_Programming/Logic_Designer/LogicDesignLAB/FullAdder_t.v,1600436449,verilog,,,,FullAdder_t,,,,,,,,
+D:/Computer_Programming/Logic_Designer/LogicDesignLAB/Lab1_FullAdder.v,1600435784,verilog,,D:/Computer_Programming/Logic_Designer/LogicDesignLAB/Lab1_Mux_1bit.v,,FullAdder;XNOR,,,,,,,,
+D:/Computer_Programming/Logic_Designer/LogicDesignLAB/Lab1_Mux_1bit.v,1600435335,verilog,,D:/Computer_Programming/Logic_Designer/LogicDesignLAB/FullAdder_t.v,,Mux_1bit,,,,,,,,
+D:/Computer_Programming/Logic_Designer/LogicDesignLAB/Mux_1bit_t.v,1600331201,verilog,,,,Mux_1bit_t,,,,,,,,
+D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab1/Mux_1bit_and_FullAdder/Mux_1bit_and_FullAdder.sim/sim_1/behav/xsim/glbl.v,1590624368,verilog,,,,glbl,,,,,,,,

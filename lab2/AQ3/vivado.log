@@ -1,0 +1,1167 @@
+#-----------------------------------------------------------
+# Vivado v2020.1.1 (64-bit)
+# SW Build 2960000 on Wed Aug  5 22:57:20 MDT 2020
+# IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020
+# Start of session at: Sun Oct  4 17:06:16 2020
+# Process ID: 7384
+# Current directory: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11836 D:\Computer_Programming\Logic_Designer\LogicDesignLAB\lab2\AQ3\AQ3.xpr
+# Log file: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3/vivado.log
+# Journal file: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3/AQ3.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Program_Files/Xilinx/Vivado/2020.1/data/ip'.
+update_compile_order -fileset sources_1
+file mkdir D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3/AQ3.srcs/sources_1/new
+close [ open D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3/AQ3.srcs/sources_1/new/Lab2_TeamX_Carry_Look_Ahead_t.v w ]
+add_files D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3/AQ3.srcs/sources_1/new/Lab2_TeamX_Carry_Look_Ahead_t.v
+update_compile_order -fileset sources_1
+set_property top Lab2_TeamX_Carry_Look_Ahead_t [current_fileset]
+update_compile_order -fileset sources_1
+set_property top Lab2_TeamX_Carry_Look_Ahead_t [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\Computer_Programming\Logic_Designer\LogicDesignLAB\lab2\AQ3\AQ3.srcs\sources_1\imports\tmp_srcs\Lab2_TeamX_Carry_Look_Ahead_Adder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\Computer_Programming\Logic_Designer\LogicDesignLAB\lab2\AQ3\AQ3.srcs\sources_1\new\Lab2_TeamX_Carry_Look_Ahead_t.v:]
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3/AQ3.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Lab2_TeamX_Carry_Look_Ahead_t' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3/AQ3.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Lab2_TeamX_Carry_Look_Ahead_t_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3/AQ3.srcs/sources_1/imports/tmp_srcs/Lab2_TeamX_Carry_Look_Ahead_Adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Carry_Look_Ahead_Adder
+INFO: [VRFC 10-311] analyzing module FullAdder
+INFO: [VRFC 10-311] analyzing module Look_4bit_Ahead
+INFO: [VRFC 10-311] analyzing module NOT_by_NAND
+INFO: [VRFC 10-311] analyzing module AND_by_NAND
+INFO: [VRFC 10-311] analyzing module OR_by_NAND
+INFO: [VRFC 10-311] analyzing module NOR_by_NAND
+INFO: [VRFC 10-311] analyzing module NAND_by_NAND
+INFO: [VRFC 10-311] analyzing module XOR_by_NAND
+INFO: [VRFC 10-311] analyzing module XNOR_by_NAND
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3/AQ3.srcs/sources_1/new/Lab2_TeamX_Carry_Look_Ahead_t.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Lab2_TeamX_Carry_Look_Ahead_t
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3/AQ3.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3/AQ3.sim/sim_1/behav/xsim'
+"xelab -wto 60652394c2d34b9c93a5094d61e6400b --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Lab2_TeamX_Carry_Look_Ahead_t_behav xil_defaultlib.Lab2_TeamX_Carry_Look_Ahead_t xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Program_Files/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 60652394c2d34b9c93a5094d61e6400b --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Lab2_TeamX_Carry_Look_Ahead_t_behav xil_defaultlib.Lab2_TeamX_Carry_Look_Ahead_t xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-2538] module instantiation should have an instance name [D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3/AQ3.srcs/sources_1/imports/tmp_srcs/Lab2_TeamX_Carry_Look_Ahead_Adder.v:14]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3/AQ3.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3/AQ3.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1027.953 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3/AQ3.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Lab2_TeamX_Carry_Look_Ahead_t' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3/AQ3.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Lab2_TeamX_Carry_Look_Ahead_t_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3/AQ3.srcs/sources_1/imports/tmp_srcs/Lab2_TeamX_Carry_Look_Ahead_Adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Carry_Look_Ahead_Adder
+INFO: [VRFC 10-311] analyzing module FullAdder
+INFO: [VRFC 10-311] analyzing module Look_4bit_Ahead
+INFO: [VRFC 10-311] analyzing module NOT_by_NAND
+INFO: [VRFC 10-311] analyzing module AND_by_NAND
+INFO: [VRFC 10-311] analyzing module OR_by_NAND
+INFO: [VRFC 10-311] analyzing module NOR_by_NAND
+INFO: [VRFC 10-311] analyzing module NAND_by_NAND
+INFO: [VRFC 10-311] analyzing module XOR_by_NAND
+INFO: [VRFC 10-311] analyzing module XNOR_by_NAND
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3/AQ3.srcs/sources_1/new/Lab2_TeamX_Carry_Look_Ahead_t.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Lab2_TeamX_Carry_Look_Ahead_t
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3/AQ3.sim/sim_1/behav/xsim'
+"xelab -wto 60652394c2d34b9c93a5094d61e6400b --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Lab2_TeamX_Carry_Look_Ahead_t_behav xil_defaultlib.Lab2_TeamX_Carry_Look_Ahead_t xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Program_Files/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 60652394c2d34b9c93a5094d61e6400b --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Lab2_TeamX_Carry_Look_Ahead_t_behav xil_defaultlib.Lab2_TeamX_Carry_Look_Ahead_t xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.AND_by_NAND
+Compiling module xil_defaultlib.XOR_by_NAND
+Compiling module xil_defaultlib.NOT_by_NAND
+Compiling module xil_defaultlib.Look_4bit_Ahead_default
+Compiling module xil_defaultlib.XNOR_by_NAND
+Compiling module xil_defaultlib.FullAdder
+Compiling module xil_defaultlib.Carry_Look_Ahead_Adder_default
+Compiling module xil_defaultlib.Lab2_TeamX_Carry_Look_Ahead_t
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Lab2_TeamX_Carry_Look_Ahead_t_behav
+
+****** Webtalk v2020.1.1 (64-bit)
+  **** SW Build 2960000 on Wed Aug  5 22:57:20 MDT 2020
+  **** IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3/AQ3.sim/sim_1/behav/xsim/xsim.dir/Lab2_TeamX_Carry_Look_Ahead_t_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3/AQ3.sim/sim_1/behav/xsim/xsim.dir/Lab2_TeamX_Carry_Look_Ahead_t_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Mon Oct  5 00:30:59 2020. For additional details about this file, please refer to the WebTalk help file at D:/Program_Files/Xilinx/Vivado/2020.1/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Mon Oct  5 00:30:59 2020...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1027.953 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3/AQ3.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Lab2_TeamX_Carry_Look_Ahead_t_behav -key {Behavioral:sim_1:Functional:Lab2_TeamX_Carry_Look_Ahead_t} -tclbatch {Lab2_TeamX_Carry_Look_Ahead_t.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1.1
+Time resolution is 1 ps
+source Lab2_TeamX_Carry_Look_Ahead_t.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+xsim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1027.953 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Lab2_TeamX_Carry_Look_Ahead_t_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:13 . Memory (MB): peak = 1027.953 ; gain = 0.000
+save_wave_config {D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3/Lab2_TeamX_Carry_Look_Ahead_t_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1182.109 ; gain = 10.285
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3/AQ3.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Lab2_TeamX_Carry_Look_Ahead_t' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3/AQ3.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Lab2_TeamX_Carry_Look_Ahead_t_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3/AQ3.sim/sim_1/behav/xsim'
+"xelab -wto 60652394c2d34b9c93a5094d61e6400b --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Lab2_TeamX_Carry_Look_Ahead_t_behav xil_defaultlib.Lab2_TeamX_Carry_Look_Ahead_t xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Program_Files/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 60652394c2d34b9c93a5094d61e6400b --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Lab2_TeamX_Carry_Look_Ahead_t_behav xil_defaultlib.Lab2_TeamX_Carry_Look_Ahead_t xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3/AQ3.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Lab2_TeamX_Carry_Look_Ahead_t_behav -key {Behavioral:sim_1:Functional:Lab2_TeamX_Carry_Look_Ahead_t} -tclbatch {Lab2_TeamX_Carry_Look_Ahead_t.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1.1
+Time resolution is 1 ps
+source Lab2_TeamX_Carry_Look_Ahead_t.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+xsim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1182.109 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Lab2_TeamX_Carry_Look_Ahead_t_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1182.109 ; gain = 0.000
+launch_runs synth_1 -jobs 8
+[Mon Oct  5 00:38:32 2020] Launched synth_1...
+Run output will be captured here: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3/AQ3.runs/synth_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3/AQ3.runs/synth_1
+
+close_project
+create_project AQ3_FPGA D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA -part xc7a35tcpg236-1
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Program_Files/Xilinx/Vivado/2020.1/data/ip'.
+add_files -norecurse D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3/AQ3.srcs/sources_1/imports/tmp_srcs/Lab2_TeamX_Carry_Look_Ahead_Adder.v
+import_files -force -norecurse
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sources_1'
+update_compile_order -fileset sources_1
+set_property top Carry_Look_Ahead_Adder [current_fileset]
+launch_runs synth_1 -jobs 8
+[Mon Oct  5 00:49:10 2020] Launched synth_1...
+Run output will be captured here: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a35tcpg236-1
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1286.863 ; gain = 0.000
+INFO: [Project 1-479] Netlist was created with Vivado 2020.1.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1366.715 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 1516.055 ; gain = 333.945
+set_property IOSTANDARD LVCMOS25 [get_ports [list {a[3]} {a[2]} {a[1]} {a[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {a[3]} {a[2]} {a[1]} {a[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {b[3]} {b[2]} {b[1]} {b[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {sum[3]} {sum[2]} {sum[1]} {sum[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list cin]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list cout]]
+place_ports {a[3]} R2
+place_ports {a[2]} T1
+place_ports {a[1]} U1
+place_ports {a[0]} W2
+place_ports {b[3]} R3
+place_ports {b[2]} T2
+startgroup
+set_property package_pin "" [get_ports [list  {b[2]}]]
+place_ports {b[1]} T2
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {b[1]}]]
+place_ports {b[2]} T2
+endgroup
+place_ports {b[1]} T3
+place_ports {b[0]} V2
+place_ports cin W13
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close_design
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+[Mon Oct  5 10:32:54 2020] Launched synth_1...
+Run output will be captured here: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a35tcpg236-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1961.117 ; gain = 0.000
+INFO: [Project 1-479] Netlist was created with Vivado 2020.1.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1961.117 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1966.375 ; gain = 5.258
+set_property IOSTANDARD LVCMOS33 [get_ports [list {a[3]} {a[2]} {a[1]} {a[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {b[3]} {b[2]} {b[1]} {b[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {b[3]} {b[2]} {b[1]} {b[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {signal[6]} {signal[5]} {signal[4]} {signal[3]} {signal[2]} {signal[1]} {signal[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list cin]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list cout]]
+place_ports {a[3]} R2
+set_property package_pin "" [get_ports [list  {a[1]}]]
+place_ports {a[2]} T1
+place_ports {a[1]} U1
+place_ports {a[0]} W2
+place_ports {b[3]} R3
+place_ports {b[2]} T2
+place_ports {b[1]} T3
+place_ports {b[0]} V2
+place_ports cin W13
+place_ports {signal[0]} W7
+place_ports {signal[1]} W6
+place_ports {signal[2]} U8
+place_ports {signal[4]} U5
+place_ports {signal[3]} V8
+place_ports {signal[5]} V5
+place_ports {signal[6]} U7
+place_ports cout V7
+file mkdir D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.srcs/constrs_1/new
+close [ open D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.srcs/constrs_1/new/cons.xdc w ]
+add_files -fileset constrs_1 D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.srcs/constrs_1/new/cons.xdc
+set_property target_constrs_file D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.srcs/constrs_1/new/cons.xdc [current_fileset -constrset]
+save_constraints -force
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+[Mon Oct  5 10:49:42 2020] Launched synth_1...
+Run output will be captured here: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.runs/synth_1/runme.log
+close_design
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a35tcpg236-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1983.676 ; gain = 0.000
+INFO: [Project 1-479] Netlist was created with Vivado 2020.1.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.srcs/constrs_1/new/cons.xdc]
+Finished Parsing XDC File [D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.srcs/constrs_1/new/cons.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1983.676 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1996.836 ; gain = 13.160
+set_property package_pin "" [get_ports [list  {AN[1]}]]
+place_ports {AN[3]} W4
+place_ports {AN[2]} V4
+place_ports {AN[1]} U4
+place_ports {AN[0]} U2
+set_property IOSTANDARD LVCMOS33 [get_ports [list {AN[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {AN[1]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {AN[3]} {AN[2]} {AN[1]} {AN[0]}]]
+set_property IOSTANDARD {} [get_ports [list {AN[3]} {AN[2]} {AN[1]} {AN[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {AN[3]} {AN[2]} {AN[1]} {AN[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {a[3]} {a[2]} {a[1]} {a[0]}]]
+save_constraints
+set_property IOSTANDARD LVCMOS33 [get_ports [list {AN[2]}]]
+save_constraints
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+[Mon Oct  5 19:17:21 2020] Launched synth_1...
+Run output will be captured here: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.runs/synth_1/runme.log
+close_design
+launch_runs impl_1 -jobs 8
+[Mon Oct  5 19:18:25 2020] Launched impl_1...
+Run output will be captured here: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Mon Oct  5 19:20:41 2020] Launched impl_1...
+Run output will be captured here: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.1.1
+  **** Build date : Aug  5 2020 at 23:32:11
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2020.1.0
+  **** Build date : May 14 2020-09:10:29
+    ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 2118.859 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183711944A
+open_hw_target: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3366.211 ; gain = 1247.352
+set_property PROGRAM.FILE {D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.runs/impl_1/Set_signal.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.runs/impl_1/Set_signal.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.runs/impl_1/Set_signal.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw_manager
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+[Mon Oct  5 19:26:49 2020] Launched synth_1...
+Run output will be captured here: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.runs/synth_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Mon Oct  5 19:27:02 2020] Launched synth_1...
+Run output will be captured here: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a35tcpg236-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4470.461 ; gain = 0.000
+INFO: [Project 1-479] Netlist was created with Vivado 2020.1.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.srcs/constrs_1/new/cons.xdc]
+Finished Parsing XDC File [D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.srcs/constrs_1/new/cons.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4530.922 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+set_property IOSTANDARD LVCMOS33 [get_ports [list {signal[6]} {signal[5]} {signal[4]} {signal[3]} {signal[2]} {signal[1]} {signal[0]}]]
+save_constraints
+file mkdir D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.srcs/sources_1/new
+close [ open D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.srcs/sources_1/new/testbench_FPGA.v w ]
+add_files D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.srcs/sources_1/new/testbench_FPGA.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Lab2_TeamX_Carry_Look_Ahead_t' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Lab2_TeamX_Carry_Look_Ahead_t_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.srcs/sources_1/imports/tmp_srcs/Lab2_TeamX_Carry_Look_Ahead_Adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Set_signal
+INFO: [VRFC 10-2458] undeclared symbol one_for_all, assumed default net type wire [D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.srcs/sources_1/imports/tmp_srcs/Lab2_TeamX_Carry_Look_Ahead_Adder.v:16]
+INFO: [VRFC 10-311] analyzing module decoder_4to16
+INFO: [VRFC 10-311] analyzing module decoder_2to4
+INFO: [VRFC 10-311] analyzing module Carry_Look_Ahead_Adder
+INFO: [VRFC 10-311] analyzing module FullAdder
+INFO: [VRFC 10-311] analyzing module Look_4bit_Ahead
+INFO: [VRFC 10-311] analyzing module NOT_by_NAND
+INFO: [VRFC 10-311] analyzing module AND_by_NAND
+INFO: [VRFC 10-311] analyzing module OR_by_NAND
+INFO: [VRFC 10-311] analyzing module NOR_by_NAND
+INFO: [VRFC 10-311] analyzing module NAND_by_NAND
+INFO: [VRFC 10-311] analyzing module XOR_by_NAND
+INFO: [VRFC 10-311] analyzing module XNOR_by_NAND
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.srcs/sources_1/new/testbench_FPGA.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Lab2_TeamX_Carry_Look_Ahead_t
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.sim/sim_1/behav/xsim'
+"xelab -wto 98c81cfe24b046a7a9eba4ca109400d4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Lab2_TeamX_Carry_Look_Ahead_t_behav xil_defaultlib.Lab2_TeamX_Carry_Look_Ahead_t xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Program_Files/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 98c81cfe24b046a7a9eba4ca109400d4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Lab2_TeamX_Carry_Look_Ahead_t_behav xil_defaultlib.Lab2_TeamX_Carry_Look_Ahead_t xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'Enable' [D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.srcs/sources_1/imports/tmp_srcs/Lab2_TeamX_Carry_Look_Ahead_Adder.v:75]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.AND_by_NAND
+Compiling module xil_defaultlib.XOR_by_NAND
+Compiling module xil_defaultlib.NOT_by_NAND
+Compiling module xil_defaultlib.Look_4bit_Ahead_default
+Compiling module xil_defaultlib.XNOR_by_NAND
+Compiling module xil_defaultlib.FullAdder
+Compiling module xil_defaultlib.Carry_Look_Ahead_Adder_default
+Compiling module xil_defaultlib.decoder_2to4_default
+Compiling module xil_defaultlib.decoder_4to16_default
+Compiling module xil_defaultlib.Set_signal
+Compiling module xil_defaultlib.Lab2_TeamX_Carry_Look_Ahead_t
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Lab2_TeamX_Carry_Look_Ahead_t_behav
+
+****** Webtalk v2020.1.1 (64-bit)
+  **** SW Build 2960000 on Wed Aug  5 22:57:20 MDT 2020
+  **** IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.sim/sim_1/behav/xsim/xsim.dir/Lab2_TeamX_Carry_Look_Ahead_t_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-344] 'run_program' was cancelled
+INFO: [Vivado 12-5357] 'elaborate' step aborted
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\Computer_Programming\Logic_Designer\LogicDesignLAB\lab2\AQ3_FPGA\AQ3_FPGA.srcs\sources_1\imports\tmp_srcs\Lab2_TeamX_Carry_Look_Ahead_Adder.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\Computer_Programming\Logic_Designer\LogicDesignLAB\lab2\AQ3_FPGA\AQ3_FPGA.srcs\sources_1\new\testbench_FPGA.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Lab2_TeamX_Carry_Look_Ahead_t' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Lab2_TeamX_Carry_Look_Ahead_t_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.sim/sim_1/behav/xsim'
+"xelab -wto 98c81cfe24b046a7a9eba4ca109400d4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Lab2_TeamX_Carry_Look_Ahead_t_behav xil_defaultlib.Lab2_TeamX_Carry_Look_Ahead_t xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Program_Files/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 98c81cfe24b046a7a9eba4ca109400d4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Lab2_TeamX_Carry_Look_Ahead_t_behav xil_defaultlib.Lab2_TeamX_Carry_Look_Ahead_t xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'Enable' [D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.srcs/sources_1/imports/tmp_srcs/Lab2_TeamX_Carry_Look_Ahead_Adder.v:75]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Lab2_TeamX_Carry_Look_Ahead_t_behav -key {Behavioral:sim_1:Functional:Lab2_TeamX_Carry_Look_Ahead_t} -tclbatch {Lab2_TeamX_Carry_Look_Ahead_t.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1.1
+Time resolution is 1 ps
+source Lab2_TeamX_Carry_Look_Ahead_t.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Lab2_TeamX_Carry_Look_Ahead_t_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 4534.852 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 4534.852 ; gain = 0.000
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Lab2_TeamX_Carry_Look_Ahead_t' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Lab2_TeamX_Carry_Look_Ahead_t_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.srcs/sources_1/imports/tmp_srcs/Lab2_TeamX_Carry_Look_Ahead_Adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Set_signal
+INFO: [VRFC 10-311] analyzing module decoder_4to16
+INFO: [VRFC 10-311] analyzing module decoder_2to4
+INFO: [VRFC 10-311] analyzing module Carry_Look_Ahead_Adder
+INFO: [VRFC 10-311] analyzing module FullAdder
+INFO: [VRFC 10-311] analyzing module Look_4bit_Ahead
+INFO: [VRFC 10-311] analyzing module NOT_by_NAND
+INFO: [VRFC 10-311] analyzing module AND_by_NAND
+INFO: [VRFC 10-311] analyzing module OR_by_NAND
+INFO: [VRFC 10-311] analyzing module NOR_by_NAND
+INFO: [VRFC 10-311] analyzing module NAND_by_NAND
+INFO: [VRFC 10-311] analyzing module XOR_by_NAND
+INFO: [VRFC 10-311] analyzing module XNOR_by_NAND
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.srcs/sources_1/new/testbench_FPGA.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Lab2_TeamX_Carry_Look_Ahead_t
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.sim/sim_1/behav/xsim'
+"xelab -wto 98c81cfe24b046a7a9eba4ca109400d4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Lab2_TeamX_Carry_Look_Ahead_t_behav xil_defaultlib.Lab2_TeamX_Carry_Look_Ahead_t xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Program_Files/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 98c81cfe24b046a7a9eba4ca109400d4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Lab2_TeamX_Carry_Look_Ahead_t_behav xil_defaultlib.Lab2_TeamX_Carry_Look_Ahead_t xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'Enable' [D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.srcs/sources_1/imports/tmp_srcs/Lab2_TeamX_Carry_Look_Ahead_Adder.v:75]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.AND_by_NAND
+Compiling module xil_defaultlib.XOR_by_NAND
+Compiling module xil_defaultlib.NOT_by_NAND
+Compiling module xil_defaultlib.Look_4bit_Ahead_default
+Compiling module xil_defaultlib.XNOR_by_NAND
+Compiling module xil_defaultlib.FullAdder
+Compiling module xil_defaultlib.Carry_Look_Ahead_Adder_default
+Compiling module xil_defaultlib.decoder_2to4_default
+Compiling module xil_defaultlib.decoder_4to16_default
+Compiling module xil_defaultlib.Set_signal
+Compiling module xil_defaultlib.Lab2_TeamX_Carry_Look_Ahead_t
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Lab2_TeamX_Carry_Look_Ahead_t_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Lab2_TeamX_Carry_Look_Ahead_t_behav -key {Behavioral:sim_1:Functional:Lab2_TeamX_Carry_Look_Ahead_t} -tclbatch {Lab2_TeamX_Carry_Look_Ahead_t.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1.1
+Time resolution is 1 ps
+source Lab2_TeamX_Carry_Look_Ahead_t.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Lab2_TeamX_Carry_Look_Ahead_t_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 4534.852 ; gain = 0.000
+export_ip_user_files -of_objects  [get_files D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.srcs/sources_1/new/testbench_FPGA.v] -no_script -reset -force -quiet
+remove_files  D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.srcs/sources_1/new/testbench_FPGA.v
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.runs/synth_1
+
+launch_runs impl_1 -jobs 8
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Mon Oct  5 19:36:44 2020] Launched synth_1...
+Run output will be captured here: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.runs/synth_1/runme.log
+[Mon Oct  5 19:36:44 2020] Launched impl_1...
+Run output will be captured here: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Mon Oct  5 19:38:13 2020] Launched impl_1...
+Run output will be captured here: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Mon Oct  5 19:39:18 2020] Launched synth_1...
+Run output will be captured here: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.runs/synth_1/runme.log
+set_property top Set_signal [current_fileset]
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.runs/synth_1
+
+launch_simulation
+Command: launch_simulation 
+boost::filesystem::remove: 程序無法存取檔案，因為檔案正由另一個程序使用。: "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.sim/sim_1/behav/xsim/simulate.log"
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_design
+launch_runs synth_1 -jobs 8
+[Mon Oct  5 19:40:00 2020] Launched synth_1...
+Run output will be captured here: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a35tcpg236-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 4534.852 ; gain = 0.000
+INFO: [Project 1-479] Netlist was created with Vivado 2020.1.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.srcs/constrs_1/new/cons.xdc]
+Finished Parsing XDC File [D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.srcs/constrs_1/new/cons.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4534.852 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+launch_runs impl_1 -jobs 8
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.048 . Memory (MB): peak = 4534.852 ; gain = 0.000
+[Mon Oct  5 19:41:01 2020] Launched impl_1...
+Run output will be captured here: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Mon Oct  5 19:41:55 2020] Launched impl_1...
+Run output will be captured here: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.1.1
+  **** Build date : Aug  5 2020 at 23:32:11
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2020.1.0
+  **** Build date : May 14 2020-09:10:29
+    ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 4534.852 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183711944A
+set_property PROGRAM.FILE {D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.runs/impl_1/Set_signal.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.runs/impl_1/Set_signal.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw_manager
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+[Mon Oct  5 19:50:13 2020] Launched synth_1...
+Run output will be captured here: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.runs/synth_1/runme.log
+close_design
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a35tcpg236-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4534.852 ; gain = 0.000
+INFO: [Project 1-479] Netlist was created with Vivado 2020.1.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.srcs/constrs_1/new/cons.xdc]
+Finished Parsing XDC File [D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.srcs/constrs_1/new/cons.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4534.852 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+launch_runs impl_1 -jobs 8
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 4534.852 ; gain = 0.000
+[Mon Oct  5 19:51:18 2020] Launched impl_1...
+Run output will be captured here: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Mon Oct  5 19:52:31 2020] Launched impl_1...
+Run output will be captured here: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.1.1
+  **** Build date : Aug  5 2020 at 23:32:11
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2020.1.0
+  **** Build date : May 14 2020-09:10:29
+    ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 4534.852 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183711944A
+set_property PROGRAM.FILE {D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.runs/impl_1/Set_signal.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.runs/impl_1/Set_signal.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw_manager
+close_project
+****** Webtalk v2020.1.1 (64-bit)
+  **** SW Build 2960000 on Wed Aug  5 22:57:20 MDT 2020
+  **** IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.hw/webtalk/labtool_webtalk.tcl -notrace
+INFO: [Common 17-186] 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.hw/webtalk/usage_statistics_ext_labtool.xml' has been successfully sent to Xilinx on Tue Oct  6 08:39:20 2020. For additional details about this file, please refer to the WebTalk help file at D:/Program_Files/Xilinx/Vivado/2020.1/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Tue Oct  6 08:39:20 2020...
+close_project: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 4534.852 ; gain = 0.000
+create_project AQ2 D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2 -part xc7a35tcpg236-1
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Program_Files/Xilinx/Vivado/2020.1/data/ip'.
+import_files -norecurse D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/tmp_srcs/Lab2_TeamX_Multiplier.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+file mkdir D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.srcs/sources_1/new
+close [ open D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.srcs/sources_1/new/testbenchAQ3.v w ]
+add_files D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.srcs/sources_1/new/testbenchAQ3.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\Computer_Programming\Logic_Designer\LogicDesignLAB\lab2\AQ2\AQ2.srcs\sources_1\new\testbenchAQ3.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\Computer_Programming\Logic_Designer\LogicDesignLAB\lab2\AQ2\AQ2.srcs\sources_1\imports\tmp_srcs\Lab2_TeamX_Multiplier.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbenchAQ3' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbenchAQ3_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.srcs/sources_1/imports/tmp_srcs/Lab2_TeamX_Multiplier.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Multiplier
+INFO: [VRFC 10-311] analyzing module RCA_4bit
+INFO: [VRFC 10-311] analyzing module FullAdder_1bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.srcs/sources_1/new/testbenchAQ3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbenchAQ3
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.sim/sim_1/behav/xsim'
+"xelab -wto 53507a61fc6c49e3b3f5baaa09001029 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbenchAQ3_behav xil_defaultlib.testbenchAQ3 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Program_Files/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 53507a61fc6c49e3b3f5baaa09001029 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbenchAQ3_behav xil_defaultlib.testbenchAQ3 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'cin' [D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.srcs/sources_1/imports/tmp_srcs/Lab2_TeamX_Multiplier.v:48]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.FullAdder_1bit
+Compiling module xil_defaultlib.RCA_4bit
+Compiling module xil_defaultlib.Multiplier
+Compiling module xil_defaultlib.testbenchAQ3
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbenchAQ3_behav
+
+****** Webtalk v2020.1.1 (64-bit)
+  **** SW Build 2960000 on Wed Aug  5 22:57:20 MDT 2020
+  **** IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.sim/sim_1/behav/xsim/xsim.dir/testbenchAQ3_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.sim/sim_1/behav/xsim/xsim.dir/testbenchAQ3_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Tue Oct  6 09:47:15 2020. For additional details about this file, please refer to the WebTalk help file at D:/Program_Files/Xilinx/Vivado/2020.1/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Tue Oct  6 09:47:15 2020...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 4534.852 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbenchAQ3_behav -key {Behavioral:sim_1:Functional:testbenchAQ3} -tclbatch {testbenchAQ3.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1.1
+Time resolution is 1 ps
+source testbenchAQ3.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+xsim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 4534.852 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbenchAQ3_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:13 . Memory (MB): peak = 4534.852 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 4534.852 ; gain = 0.000
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbenchAQ3' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbenchAQ3_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.srcs/sources_1/imports/tmp_srcs/Lab2_TeamX_Multiplier.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Multiplier
+INFO: [VRFC 10-311] analyzing module RCA_4bit
+INFO: [VRFC 10-311] analyzing module FullAdder_1bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.srcs/sources_1/new/testbenchAQ3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbenchAQ3
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.sim/sim_1/behav/xsim'
+"xelab -wto 53507a61fc6c49e3b3f5baaa09001029 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbenchAQ3_behav xil_defaultlib.testbenchAQ3 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Program_Files/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 53507a61fc6c49e3b3f5baaa09001029 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbenchAQ3_behav xil_defaultlib.testbenchAQ3 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'cin' [D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.srcs/sources_1/imports/tmp_srcs/Lab2_TeamX_Multiplier.v:48]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.FullAdder_1bit
+Compiling module xil_defaultlib.RCA_4bit
+Compiling module xil_defaultlib.Multiplier
+Compiling module xil_defaultlib.testbenchAQ3
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbenchAQ3_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbenchAQ3_behav -key {Behavioral:sim_1:Functional:testbenchAQ3} -tclbatch {testbenchAQ3.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1.1
+Time resolution is 1 ps
+source testbenchAQ3.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbenchAQ3_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 4534.852 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbenchAQ3' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbenchAQ3_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.srcs/sources_1/imports/tmp_srcs/Lab2_TeamX_Multiplier.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Multiplier
+INFO: [VRFC 10-311] analyzing module RCA_4bit
+INFO: [VRFC 10-311] analyzing module FullAdder_1bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.srcs/sources_1/new/testbenchAQ3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbenchAQ3
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.sim/sim_1/behav/xsim'
+"xelab -wto 53507a61fc6c49e3b3f5baaa09001029 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbenchAQ3_behav xil_defaultlib.testbenchAQ3 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Program_Files/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 53507a61fc6c49e3b3f5baaa09001029 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbenchAQ3_behav xil_defaultlib.testbenchAQ3 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'cin' [D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.srcs/sources_1/imports/tmp_srcs/Lab2_TeamX_Multiplier.v:48]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.FullAdder_1bit
+Compiling module xil_defaultlib.RCA_4bit
+Compiling module xil_defaultlib.Multiplier
+Compiling module xil_defaultlib.testbenchAQ3
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbenchAQ3_behav
+INFO: [Common 17-344] 'run_program' was cancelled
+INFO: [Vivado 12-5357] 'elaborate' step aborted
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbenchAQ3' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbenchAQ3_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.sim/sim_1/behav/xsim'
+"xelab -wto 53507a61fc6c49e3b3f5baaa09001029 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbenchAQ3_behav xil_defaultlib.testbenchAQ3 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Program_Files/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 53507a61fc6c49e3b3f5baaa09001029 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbenchAQ3_behav xil_defaultlib.testbenchAQ3 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'cin' [D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.srcs/sources_1/imports/tmp_srcs/Lab2_TeamX_Multiplier.v:48]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbenchAQ3_behav -key {Behavioral:sim_1:Functional:testbenchAQ3} -tclbatch {testbenchAQ3.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1.1
+Time resolution is 1 ps
+source testbenchAQ3.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbenchAQ3_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 4534.852 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbenchAQ3' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbenchAQ3_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.srcs/sources_1/imports/tmp_srcs/Lab2_TeamX_Multiplier.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Multiplier
+INFO: [VRFC 10-311] analyzing module RCA_4bit
+INFO: [VRFC 10-311] analyzing module FullAdder_1bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.srcs/sources_1/new/testbenchAQ3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbenchAQ3
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.sim/sim_1/behav/xsim'
+"xelab -wto 53507a61fc6c49e3b3f5baaa09001029 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbenchAQ3_behav xil_defaultlib.testbenchAQ3 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Program_Files/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 53507a61fc6c49e3b3f5baaa09001029 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbenchAQ3_behav xil_defaultlib.testbenchAQ3 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 35 differs from formal bit length 4 for port 'a' [D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.srcs/sources_1/imports/tmp_srcs/Lab2_TeamX_Multiplier.v:32]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'cin' [D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.srcs/sources_1/imports/tmp_srcs/Lab2_TeamX_Multiplier.v:48]
+WARNING: [VRFC 10-526] concatenation with unsized literal; will interpret as 32 bits [D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.srcs/sources_1/imports/tmp_srcs/Lab2_TeamX_Multiplier.v:32]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.FullAdder_1bit
+Compiling module xil_defaultlib.RCA_4bit
+Compiling module xil_defaultlib.Multiplier
+Compiling module xil_defaultlib.testbenchAQ3
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbenchAQ3_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbenchAQ3_behav -key {Behavioral:sim_1:Functional:testbenchAQ3} -tclbatch {testbenchAQ3.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1.1
+Time resolution is 1 ps
+source testbenchAQ3.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbenchAQ3_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 4534.852 ; gain = 0.000
+save_wave_config {D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/testbenchAQ3_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbenchAQ3' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbenchAQ3_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.srcs/sources_1/imports/tmp_srcs/Lab2_TeamX_Multiplier.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Multiplier
+INFO: [VRFC 10-311] analyzing module RCA_4bit
+INFO: [VRFC 10-311] analyzing module FullAdder_1bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.srcs/sources_1/new/testbenchAQ3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbenchAQ3
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.sim/sim_1/behav/xsim'
+"xelab -wto 53507a61fc6c49e3b3f5baaa09001029 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbenchAQ3_behav xil_defaultlib.testbenchAQ3 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Program_Files/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 53507a61fc6c49e3b3f5baaa09001029 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbenchAQ3_behav xil_defaultlib.testbenchAQ3 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 35 differs from formal bit length 4 for port 'a' [D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.srcs/sources_1/imports/tmp_srcs/Lab2_TeamX_Multiplier.v:32]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'cin' [D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.srcs/sources_1/imports/tmp_srcs/Lab2_TeamX_Multiplier.v:48]
+WARNING: [VRFC 10-526] concatenation with unsized literal; will interpret as 32 bits [D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.srcs/sources_1/imports/tmp_srcs/Lab2_TeamX_Multiplier.v:32]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.FullAdder_1bit
+Compiling module xil_defaultlib.RCA_4bit
+Compiling module xil_defaultlib.Multiplier
+Compiling module xil_defaultlib.testbenchAQ3
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbenchAQ3_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbenchAQ3_behav -key {Behavioral:sim_1:Functional:testbenchAQ3} -tclbatch {testbenchAQ3.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1.1
+Time resolution is 1 ps
+source testbenchAQ3.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbenchAQ3_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 4534.852 ; gain = 0.000
+save_wave_config {D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/testbenchAQ3_behav1.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Oct  6 12:40:35 2020...

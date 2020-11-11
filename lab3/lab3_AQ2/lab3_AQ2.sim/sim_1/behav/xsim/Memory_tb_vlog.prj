@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../lab3_AQ2.srcs/sources_1/imports/Ad_Sources/Lab3_TeamX_Memory.v" \
+"../../../../lab3_AQ2.srcs/sources_1/new/Memory_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

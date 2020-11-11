@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="Memory_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="Memory_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="890753fs"></ZoomStartTime>
+      <ZoomEndTime time="1016054fs"></ZoomEndTime>
+      <Cursor1Time time="989853fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="237"></NameColumnWidth>
+      <ValueColumnWidth column_width="115"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="8" />
+   <wvobject fp_name="/Memory_tb/CLK" type="logic">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Memory_tb/REN" type="logic">
+      <obj_property name="ElementShortName">REN</obj_property>
+      <obj_property name="ObjectShortName">REN</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Memory_tb/WEN" type="logic">
+      <obj_property name="ElementShortName">WEN</obj_property>
+      <obj_property name="ObjectShortName">WEN</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Memory_tb/DIN" type="array">
+      <obj_property name="ElementShortName">DIN[7:0]</obj_property>
+      <obj_property name="ObjectShortName">DIN[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Memory_tb/ADR" type="array">
+      <obj_property name="ElementShortName">ADR[6:0]</obj_property>
+      <obj_property name="ObjectShortName">ADR[6:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Memory_tb/out_mem" type="array">
+      <obj_property name="ElementShortName">out_mem[127:0][7:0]</obj_property>
+      <obj_property name="ObjectShortName">out_mem[127:0][7:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/Memory_tb/curANS" type="array">
+      <obj_property name="ElementShortName">curANS[7:0]</obj_property>
+      <obj_property name="ObjectShortName">curANS[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Memory_tb/DOUT" type="array">
+      <obj_property name="ElementShortName">DOUT[7:0]</obj_property>
+      <obj_property name="ObjectShortName">DOUT[7:0]</obj_property>
+   </wvobject>
+</wave_config>

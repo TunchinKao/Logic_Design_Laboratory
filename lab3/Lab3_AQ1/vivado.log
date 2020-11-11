@@ -1,0 +1,44 @@
+#-----------------------------------------------------------
+# Vivado v2020.1.1 (64-bit)
+# SW Build 2960000 on Wed Aug  5 22:57:20 MDT 2020
+# IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020
+# Start of session at: Thu Oct 22 07:39:38 2020
+# Process ID: 14888
+# Current directory: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/Lab3_AQ1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent20148 D:\Computer_Programming\Logic_Designer\LogicDesignLAB\lab3\Lab3_AQ1\Lab3_AQ1.xpr
+# Log file: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/Lab3_AQ1/vivado.log
+# Journal file: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/Lab3_AQ1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/Lab3_AQ1/Lab3_AQ1.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Program_Files/Xilinx/Vivado/2020.1/data/ip'.
+update_compile_order -fileset sources_1
+create_bd_design "design_1"
+Wrote  : <D:\Computer_Programming\Logic_Designer\LogicDesignLAB\lab3\Lab3_AQ1\Lab3_AQ1.srcs\sources_1\bd\design_1\design_1.bd> 
+update_compile_order -fileset sources_1
+open_bd_design {D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/Lab3_AQ1/Lab3_AQ1.srcs/sources_1/bd/design_1/design_1.bd}
+close_bd_design [get_bd_designs design_1]
+Wrote  : <D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/Lab3_AQ1/Lab3_AQ1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+generate_target all [get_files  D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/Lab3_AQ1/Lab3_AQ1.srcs/sources_1/bd/design_1/design_1.bd]
+Wrote  : <D:\Computer_Programming\Logic_Designer\LogicDesignLAB\lab3\Lab3_AQ1\Lab3_AQ1.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/Lab3_AQ1/Lab3_AQ1.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/Lab3_AQ1/Lab3_AQ1.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/Lab3_AQ1/Lab3_AQ1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+Exporting to file D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/Lab3_AQ1/Lab3_AQ1.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/Lab3_AQ1/Lab3_AQ1.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/Lab3_AQ1/Lab3_AQ1.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+export_ip_user_files -of_objects [get_files D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/Lab3_AQ1/Lab3_AQ1.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/Lab3_AQ1/Lab3_AQ1.srcs/sources_1/bd/design_1/design_1.bd]
+export_simulation -of_objects [get_files D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/Lab3_AQ1/Lab3_AQ1.srcs/sources_1/bd/design_1/design_1.bd] -directory D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/Lab3_AQ1/Lab3_AQ1.ip_user_files/sim_scripts -ip_user_files_dir D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/Lab3_AQ1/Lab3_AQ1.ip_user_files -ipstatic_source_dir D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/Lab3_AQ1/Lab3_AQ1.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/Lab3_AQ1/Lab3_AQ1.cache/compile_simlib/modelsim} {questa=D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/Lab3_AQ1/Lab3_AQ1.cache/compile_simlib/questa} {riviera=D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/Lab3_AQ1/Lab3_AQ1.cache/compile_simlib/riviera} {activehdl=D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/Lab3_AQ1/Lab3_AQ1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+open_bd_design {D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/Lab3_AQ1/Lab3_AQ1.srcs/sources_1/bd/design_1/design_1.bd}
+Successfully read diagram <design_1> from BD file <D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/Lab3_AQ1/Lab3_AQ1.srcs/sources_1/bd/design_1/design_1.bd>
+close_bd_design [get_bd_designs design_1]
+export_ip_user_files -of_objects  [get_files D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/Lab3_AQ1/Lab3_AQ1.srcs/sources_1/bd/design_1/design_1.bd] -no_script -reset -force -quiet
+remove_files  D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/Lab3_AQ1/Lab3_AQ1.srcs/sources_1/bd/design_1/design_1.bd
+file delete -force D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/Lab3_AQ1/Lab3_AQ1.srcs/sources_1/bd/design_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 22 07:49:28 2020...

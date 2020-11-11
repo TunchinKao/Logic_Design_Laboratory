@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1.1 (64-bit)
+# SW Build 2960000 on Wed Aug  5 22:57:20 MDT 2020
+# IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020
+# Start of session at: Thu Sep 24 15:36:25 2020
+# Process ID: 22668
+# Current directory: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab1/Lab1_Team10_4bit_comp_finalTEST/Lab1_Team10_4bit_comp_finalTEST.runs/impl_1
+# Command line: vivado.exe -log Comparator_4bits.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Comparator_4bits.tcl -notrace
+# Log file: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab1/Lab1_Team10_4bit_comp_finalTEST/Lab1_Team10_4bit_comp_finalTEST.runs/impl_1/Comparator_4bits.vdi
+# Journal file: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab1/Lab1_Team10_4bit_comp_finalTEST/Lab1_Team10_4bit_comp_finalTEST.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source Comparator_4bits.tcl -notrace

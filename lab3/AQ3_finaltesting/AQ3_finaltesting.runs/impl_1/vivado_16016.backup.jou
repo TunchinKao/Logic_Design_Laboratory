@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1.1 (64-bit)
+# SW Build 2960000 on Wed Aug  5 22:57:20 MDT 2020
+# IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020
+# Start of session at: Wed Nov  4 17:30:10 2020
+# Process ID: 16016
+# Current directory: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/impl_1
+# Command line: vivado.exe -log FPGA_Display.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source FPGA_Display.tcl -notrace
+# Log file: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/impl_1/FPGA_Display.vdi
+# Journal file: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source FPGA_Display.tcl -notrace

@@ -1,0 +1,16 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.srcs/sources_1/imports/tmp_srcs/Lab2_TeamX_Carry_Look_Ahead_Adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Set_signal
+INFO: [VRFC 10-311] analyzing module decoder_4to16
+INFO: [VRFC 10-311] analyzing module decoder_2to4
+INFO: [VRFC 10-311] analyzing module Carry_Look_Ahead_Adder
+INFO: [VRFC 10-311] analyzing module FullAdder
+INFO: [VRFC 10-311] analyzing module Look_4bit_Ahead
+INFO: [VRFC 10-311] analyzing module NOT_by_NAND
+INFO: [VRFC 10-311] analyzing module AND_by_NAND
+INFO: [VRFC 10-311] analyzing module OR_by_NAND
+INFO: [VRFC 10-311] analyzing module NOR_by_NAND
+INFO: [VRFC 10-311] analyzing module NAND_by_NAND
+INFO: [VRFC 10-311] analyzing module XOR_by_NAND
+INFO: [VRFC 10-311] analyzing module XNOR_by_NAND
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.srcs/sources_1/new/testbench_FPGA.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Lab2_TeamX_Carry_Look_Ahead_t

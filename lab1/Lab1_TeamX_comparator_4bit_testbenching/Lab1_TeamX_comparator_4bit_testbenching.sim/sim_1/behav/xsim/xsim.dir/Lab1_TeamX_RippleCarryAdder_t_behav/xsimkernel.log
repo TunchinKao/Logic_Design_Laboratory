@@ -1,0 +1,7 @@
+Running: xsim.dir/Lab1_TeamX_RippleCarryAdder_t_behav/xsimk.exe -simmode gui -wdb Lab1_TeamX_RippleCarryAdder_t_behav.wdb -simrunnum 0 -socket 57523
+Design successfully loaded
+Design Loading Memory Usage: 6524 KB (Peak: 6524 KB)
+Design Loading CPU Usage: 46 ms
+Simulation completed
+Simulation Memory Usage: 7544 KB (Peak: 7544 KB)
+Simulation CPU Usage: 93 ms

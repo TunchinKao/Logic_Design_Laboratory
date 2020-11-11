@@ -1,0 +1,7 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab1/Lab1_Team10_4bit_comp_finalTEST/Lab1_Team10_4bit_comp_finalTEST.srcs/sources_1/imports/Final_ANS/Lab1_Team10_Comparator_4bits.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Comparator_4bits
+INFO: [VRFC 10-311] analyzing module gt
+INFO: [VRFC 10-311] analyzing module lt
+INFO: [VRFC 10-311] analyzing module _xnor
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab1/Lab1_Team10_4bit_comp_finalTEST/Lab1_Team10_4bit_comp_finalTEST.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

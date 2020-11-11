@@ -1,0 +1,261 @@
+#-----------------------------------------------------------
+# Vivado v2020.1.1 (64-bit)
+# SW Build 2960000 on Wed Aug  5 22:57:20 MDT 2020
+# IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020
+# Start of session at: Sun Oct  4 17:06:16 2020
+# Process ID: 7384
+# Current directory: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11836 D:\Computer_Programming\Logic_Designer\LogicDesignLAB\lab2\AQ3\AQ3.xpr
+# Log file: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3/vivado.log
+# Journal file: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3/AQ3.xpr
+update_compile_order -fileset sources_1
+file mkdir D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3/AQ3.srcs/sources_1/new
+close [ open D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3/AQ3.srcs/sources_1/new/Lab2_TeamX_Carry_Look_Ahead_t.v w ]
+add_files D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3/AQ3.srcs/sources_1/new/Lab2_TeamX_Carry_Look_Ahead_t.v
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Lab2_TeamX_Carry_Look_Ahead_t [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+set_property top Lab2_TeamX_Carry_Look_Ahead_t [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+launch_simulation
+launch_simulation
+source Lab2_TeamX_Carry_Look_Ahead_t.tcl
+save_wave_config {D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3/Lab2_TeamX_Carry_Look_Ahead_t_behav.wcfg}
+close_sim
+launch_simulation
+source Lab2_TeamX_Carry_Look_Ahead_t.tcl
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+close_sim
+reset_run synth_1
+close_project
+create_project AQ3_FPGA D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA -part xc7a35tcpg236-1
+add_files -norecurse D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3/AQ3.srcs/sources_1/imports/tmp_srcs/Lab2_TeamX_Carry_Look_Ahead_Adder.v
+import_files -force -norecurse
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Carry_Look_Ahead_Adder [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+set_property IOSTANDARD LVCMOS25 [get_ports [list {a[3]} {a[2]} {a[1]} {a[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {a[3]} {a[2]} {a[1]} {a[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {b[3]} {b[2]} {b[1]} {b[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {sum[3]} {sum[2]} {sum[1]} {sum[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list cin]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list cout]]
+place_ports {a[3]} R2
+place_ports {a[2]} T1
+place_ports {a[1]} U1
+place_ports {a[0]} W2
+place_ports {b[3]} R3
+place_ports {b[2]} T2
+startgroup
+set_property package_pin "" [get_ports [list  {b[2]}]]
+place_ports {b[1]} T2
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {b[1]}]]
+place_ports {b[2]} T2
+endgroup
+place_ports {b[1]} T3
+place_ports {b[0]} V2
+place_ports cin W13
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close_design
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+set_property IOSTANDARD LVCMOS33 [get_ports [list {a[3]} {a[2]} {a[1]} {a[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {b[3]} {b[2]} {b[1]} {b[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {b[3]} {b[2]} {b[1]} {b[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {signal[6]} {signal[5]} {signal[4]} {signal[3]} {signal[2]} {signal[1]} {signal[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list cin]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list cout]]
+place_ports {a[3]} R2
+set_property package_pin "" [get_ports [list  {a[1]}]]
+place_ports {a[2]} T1
+place_ports {a[1]} U1
+place_ports {a[0]} W2
+place_ports {b[3]} R3
+place_ports {b[2]} T2
+place_ports {b[1]} T3
+place_ports {b[0]} V2
+place_ports cin W13
+place_ports {signal[0]} W7
+place_ports {signal[1]} W6
+place_ports {signal[2]} U8
+place_ports {signal[4]} U5
+place_ports {signal[3]} V8
+place_ports {signal[5]} V5
+place_ports {signal[6]} U7
+place_ports cout V7
+file mkdir D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.srcs/constrs_1/new
+close [ open D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.srcs/constrs_1/new/cons.xdc w ]
+add_files -fileset constrs_1 D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.srcs/constrs_1/new/cons.xdc
+set_property target_constrs_file D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.srcs/constrs_1/new/cons.xdc [current_fileset -constrset]
+save_constraints -force
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+set_property package_pin "" [get_ports [list  {AN[1]}]]
+place_ports {AN[3]} W4
+place_ports {AN[2]} V4
+place_ports {AN[1]} U4
+place_ports {AN[0]} U2
+set_property IOSTANDARD LVCMOS33 [get_ports [list {AN[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {AN[1]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {AN[3]} {AN[2]} {AN[1]} {AN[0]}]]
+set_property IOSTANDARD {} [get_ports [list {AN[3]} {AN[2]} {AN[1]} {AN[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {AN[3]} {AN[2]} {AN[1]} {AN[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {a[3]} {a[2]} {a[1]} {a[0]}]]
+save_constraints
+set_property IOSTANDARD LVCMOS33 [get_ports [list {AN[2]}]]
+save_constraints
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+close_design
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.runs/impl_1/Set_signal.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.runs/impl_1/Set_signal.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.runs/impl_1/Set_signal.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_hw_manager
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+set_property IOSTANDARD LVCMOS33 [get_ports [list {signal[6]} {signal[5]} {signal[4]} {signal[3]} {signal[2]} {signal[1]} {signal[0]}]]
+save_constraints
+file mkdir D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.srcs/sources_1/new
+close [ open D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.srcs/sources_1/new/testbench_FPGA.v w ]
+add_files D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.srcs/sources_1/new/testbench_FPGA.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+source Lab2_TeamX_Carry_Look_Ahead_t.tcl
+close_sim
+launch_simulation
+source Lab2_TeamX_Carry_Look_Ahead_t.tcl
+export_ip_user_files -of_objects  [get_files D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.srcs/sources_1/new/testbench_FPGA.v] -no_script -reset -force -quiet
+remove_files  D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.srcs/sources_1/new/testbench_FPGA.v
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Set_signal [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+reset_run synth_1
+launch_simulation
+close_sim
+close_design
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.runs/impl_1/Set_signal.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.runs/impl_1/Set_signal.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_hw_manager
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.runs/impl_1/Set_signal.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ3_FPGA/AQ3_FPGA.runs/impl_1/Set_signal.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_hw_manager
+close_project
+create_project AQ2 D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2 -part xc7a35tcpg236-1
+import_files -norecurse D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/tmp_srcs/Lab2_TeamX_Multiplier.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+file mkdir D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.srcs/sources_1/new
+close [ open D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.srcs/sources_1/new/testbenchAQ3.v w ]
+add_files D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/AQ2.srcs/sources_1/new/testbenchAQ3.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_simulation
+source testbenchAQ3.tcl
+close_sim
+launch_simulation
+source testbenchAQ3.tcl
+close_sim
+launch_simulation
+launch_simulation
+source testbenchAQ3.tcl
+close_sim
+launch_simulation
+source testbenchAQ3.tcl
+save_wave_config {D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/testbenchAQ3_behav.wcfg}
+close_sim
+launch_simulation
+source testbenchAQ3.tcl
+save_wave_config {D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab2/AQ2/testbenchAQ3_behav1.wcfg}
+close_sim

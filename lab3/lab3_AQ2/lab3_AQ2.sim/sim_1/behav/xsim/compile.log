@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.srcs/sources_1/imports/Ad_Sources/Lab3_TeamX_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/lab3_AQ2/lab3_AQ2.srcs/sources_1/new/Memory_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Memory_tb

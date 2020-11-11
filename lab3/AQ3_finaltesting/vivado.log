@@ -1,0 +1,351 @@
+#-----------------------------------------------------------
+# Vivado v2020.1.1 (64-bit)
+# SW Build 2960000 on Wed Aug  5 22:57:20 MDT 2020
+# IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020
+# Start of session at: Wed Nov  4 15:53:31 2020
+# Process ID: 3024
+# Current directory: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent23240 D:\Computer_Programming\Logic_Designer\LogicDesignLAB\lab3\AQ3_finaltesting\AQ3_finaltesting.xpr
+# Log file: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/vivado.log
+# Journal file: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.xpr
+CRITICAL WARNING: [Project 1-19] Could not find the file 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.srcs/sources_1/imports/Sources/Lab3_Team10_Parameterized_Ping_Pong_Counter.v'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.srcs/sources_1/imports/Sources/Parameterized_Ping_Pong_Counter_t.v'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Program_Files/Xilinx/Vivado/2020.1/data/ip'.
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.srcs/sources_1/imports/Sources/Lab3_Team10_Parameterized_Ping_Pong_Counter.v] -no_script -reset -force -quiet
+remove_files  D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.srcs/sources_1/imports/Sources/Lab3_Team10_Parameterized_Ping_Pong_Counter.v
+export_ip_user_files -of_objects  [get_files D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.srcs/sources_1/imports/Sources/Parameterized_Ping_Pong_Counter_t.v] -no_script -reset -force -quiet
+remove_files  D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.srcs/sources_1/imports/Sources/Parameterized_Ping_Pong_Counter_t.v
+import_files -norecurse D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/Lab3_FinalFiles/Lab3_Team10_Parameterized_Ping_Pong_Counter_fpga.v
+launch_runs synth_1 -jobs 8
+[Wed Nov  4 15:57:23 2020] Launched synth_1...
+Run output will be captured here: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a35tcpg236-1
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1084.895 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.1.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1174.609 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:16 ; elapsed = 00:00:09 . Memory (MB): peak = 1330.426 ; gain = 304.691
+set_property IOSTANDARD LVCMOS33 [get_ports [list {an[3]} {an[2]} {an[1]} {an[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {max[3]} {max[2]} {max[1]} {max[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {min[3]} {min[2]} {min[1]} {min[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {num[3]} {num[2]} {num[1]} {num[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {out[6]} {out[5]} {out[4]} {out[3]} {out[2]} {out[1]} {out[0]}]]
+place_ports clk W5
+place_ports enable R2
+place_ports flip U17
+place_ports flip_db_op E19
+place_ports not_rst_n_dp_op U16
+place_ports rst_n T18
+set_property IOSTANDARD LVCMOS33 [get_ports [list clk]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list enable]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list flip]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list flip_db_op]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list not_rst_n_dp_op]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list rst_n]]
+place_ports {an[3]} W4
+place_ports {an[2]} V4
+place_ports {an[1]} U4
+place_ports {an[0]} U2
+place_ports {max[3]} T1
+place_ports {max[2]} U1
+place_ports {max[1]} W2
+place_ports {max[0]} R3
+place_ports {min[3]} T2
+place_ports {min[2]} T3
+place_ports {min[1]} V2
+place_ports {min[0]} W14
+place_ports {min[0]} W13
+place_ports {num[3]} L1
+place_ports {num[2]} P1
+place_ports {num[1]} N3
+place_ports {num[0]} P3
+place_ports {out[6]} W7
+place_ports {out[5]} W6
+place_ports {out[4]} U8
+place_ports {out[3]} V8
+place_ports {out[2]} U5
+place_ports {out[1]} V5
+place_ports {out[0]} U7
+file mkdir D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.srcs/constrs_1/new
+close [ open D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.srcs/constrs_1/new/cons.xdc w ]
+add_files -fileset constrs_1 D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.srcs/constrs_1/new/cons.xdc
+set_property target_constrs_file D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.srcs/constrs_1/new/cons.xdc [current_fileset -constrset]
+save_constraints -force
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+[Wed Nov  4 16:16:42 2020] Launched synth_1...
+Run output will be captured here: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/synth_1/runme.log
+close_design
+launch_runs impl_1 -jobs 8
+[Wed Nov  4 16:17:31 2020] Launched impl_1...
+Run output will be captured here: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Wed Nov  4 16:18:24 2020] Launched impl_1...
+Run output will be captured here: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.1.1
+  **** Build date : Aug  5 2020 at 23:32:11
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2020.1.0
+  **** Build date : May 14 2020-09:10:29
+    ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 1827.910 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183711944A
+open_hw_target: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3117.051 ; gain = 1289.141
+set_property PROGRAM.FILE {D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/impl_1/FPGA_Display.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/impl_1/FPGA_Display.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183711944A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183711944A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+CRITICAL WARNING: [HDL 9-806] Syntax error near "reg". [D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.srcs/sources_1/imports/Lab3_FinalFiles/Lab3_Team10_Parameterized_Ping_Pong_Counter_fpga.v:259]
+[Wed Nov  4 16:45:05 2020] Launched synth_1...
+Run output will be captured here: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+[Wed Nov  4 16:46:19 2020] Launched synth_1...
+Run output will be captured here: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 8
+[Wed Nov  4 16:47:06 2020] Launched impl_1...
+Run output will be captured here: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Wed Nov  4 16:48:02 2020] Launched impl_1...
+Run output will be captured here: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/impl_1/FPGA_Display.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+[Wed Nov  4 16:54:47 2020] Launched synth_1...
+Run output will be captured here: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 8
+[Wed Nov  4 16:55:50 2020] Launched impl_1...
+Run output will be captured here: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Wed Nov  4 16:56:45 2020] Launched impl_1...
+Run output will be captured here: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/impl_1/FPGA_Display.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183711944A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183711944A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+[Wed Nov  4 17:07:28 2020] Launched synth_1...
+Run output will be captured here: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 8
+[Wed Nov  4 17:08:18 2020] Launched impl_1...
+Run output will be captured here: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Wed Nov  4 17:09:14 2020] Launched impl_1...
+Run output will be captured here: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/impl_1/FPGA_Display.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a35tcpg236-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 3175.336 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.1.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.srcs/constrs_1/new/cons.xdc]
+Finished Parsing XDC File [D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.srcs/constrs_1/new/cons.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 3236.230 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+close_design
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a35tcpg236-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3380.543 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.1.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.srcs/constrs_1/new/cons.xdc]
+Finished Parsing XDC File [D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.srcs/constrs_1/new/cons.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3380.543 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+close_design
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+[Wed Nov  4 17:17:22 2020] Launched synth_1...
+Run output will be captured here: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 8
+[Wed Nov  4 17:18:19 2020] Launched impl_1...
+Run output will be captured here: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Wed Nov  4 17:19:23 2020] Launched impl_1...
+Run output will be captured here: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/impl_1/FPGA_Display.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+[Wed Nov  4 17:21:28 2020] Launched synth_1...
+Run output will be captured here: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 8
+[Wed Nov  4 17:22:07 2020] Launched impl_1...
+Run output will be captured here: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Wed Nov  4 17:23:01 2020] Launched impl_1...
+Run output will be captured here: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/impl_1/FPGA_Display.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+[Wed Nov  4 17:25:48 2020] Launched synth_1...
+Run output will be captured here: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 8
+[Wed Nov  4 17:26:37 2020] Launched impl_1...
+Run output will be captured here: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Wed Nov  4 17:27:33 2020] Launched impl_1...
+Run output will be captured here: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/impl_1/FPGA_Display.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+[Wed Nov  4 17:29:19 2020] Launched synth_1...
+Run output will be captured here: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 8
+[Wed Nov  4 17:30:03 2020] Launched impl_1...
+Run output will be captured here: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Wed Nov  4 17:31:42 2020] Launched impl_1...
+Run output will be captured here: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/impl_1/FPGA_Display.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+[Wed Nov  4 17:35:16 2020] Launched synth_1...
+Run output will be captured here: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a35tcpg236-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 3380.551 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 22 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.1.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.srcs/constrs_1/new/cons.xdc]
+WARNING: [Vivado 12-584] No ports matched 'flip_db_op'. [D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.srcs/constrs_1/new/cons.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.srcs/constrs_1/new/cons.xdc:27]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'flip_db_op'. [D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.srcs/constrs_1/new/cons.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.srcs/constrs_1/new/cons.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.srcs/constrs_1/new/cons.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3383.570 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+set_property IOSTANDARD LVCMOS33 [get_ports [list flip_db_op_longer]]
+place_ports flip_db_op_longer E19
+save_constraints
+launch_runs impl_1 -jobs 8
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 3388.535 ; gain = 0.332
+[Wed Nov  4 17:36:36 2020] Launched impl_1...
+Run output will be captured here: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Wed Nov  4 17:37:36 2020] Launched impl_1...
+Run output will be captured here: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/impl_1/FPGA_Display.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Nov  4 17:40:25 2020...

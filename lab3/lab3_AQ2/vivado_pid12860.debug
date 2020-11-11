@@ -1,0 +1,45 @@
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2020.1.1 (64-bit)
+# SW Build: 2960000 on Wed Aug  5 22:57:20 MDT 2020
+# IP Build: 2956692 on Thu Aug  6 01:41:30 MDT 2020
+# Current time: Wed Oct 21 16:12:46 CST 2020
+# Process ID (PID): 12860
+# User: tunch
+# OS: Windows 10
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+Wed Oct 21 16:12:46 CST 2020
+java.lang.NullPointerException
+	at ui.utils.an.aFz(SourceFile:155)
+	at ui.b.y.eSk(SourceFile:1562)
+	at ui.b.y.c(SourceFile:656)
+	at ui.b.y.a(SourceFile:545)
+	at ui.b.A.L.g(SourceFile:75)
+	at ui.b.A.ac.valueChanged(SourceFile:379)
+	at java.desktop/javax.swing.tree.DefaultTreeSelectionModel.fireValueChanged(Unknown Source)
+	at java.desktop/javax.swing.tree.DefaultTreeSelectionModel.notifyPathChange(Unknown Source)
+	at java.desktop/javax.swing.tree.DefaultTreeSelectionModel.addSelectionPaths(Unknown Source)
+	at java.desktop/javax.swing.tree.DefaultTreeSelectionModel.addSelectionPath(Unknown Source)
+	at ui.b.A.T.l(SourceFile:772)
+	at ui.b.A.T.fPm(SourceFile:457)
+	at ui.b.A.T.fiP(SourceFile:384)
+	at ui.b.A.T.fPi(SourceFile:309)
+	at ui.b.A.T.init(SourceFile:89)
+	at ui.b.A.L.<init>(SourceFile:48)
+	at ui.b.K.a.cO.gdm(SourceFile:37)
+	at ui.b.K.a.bCG(SourceFile:86)
+	at ui.b.K.d.tG(SourceFile:546)
+	at ui.b.K.d.aGB(SourceFile:406)
+	at ui.b.c.p.eTU(SourceFile:104)
+	at ui.b.c.p.eTS(SourceFile:55)
+	at ui.b.c.p.init(SourceFile:44)
+	at ui.b.K.d.init(SourceFile:156)
+	at ui.b.K.d.<init>(SourceFile:132)
+	at ui.views.c.dF.O(SourceFile:112)
+	at ui.cU.construct(SourceFile:859)
+	at ui.frmwork.A.run(SourceFile:203)
+	at java.base/java.lang.Thread.run(Unknown Source)
+

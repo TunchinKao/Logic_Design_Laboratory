@@ -1,0 +1,194 @@
+#-----------------------------------------------------------
+# Vivado v2020.1.1 (64-bit)
+# SW Build 2960000 on Wed Aug  5 22:57:20 MDT 2020
+# IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020
+# Start of session at: Wed Nov  4 15:53:31 2020
+# Process ID: 3024
+# Current directory: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent23240 D:\Computer_Programming\Logic_Designer\LogicDesignLAB\lab3\AQ3_finaltesting\AQ3_finaltesting.xpr
+# Log file: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/vivado.log
+# Journal file: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.xpr
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.srcs/sources_1/imports/Sources/Lab3_Team10_Parameterized_Ping_Pong_Counter.v] -no_script -reset -force -quiet
+remove_files  D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.srcs/sources_1/imports/Sources/Lab3_Team10_Parameterized_Ping_Pong_Counter.v
+export_ip_user_files -of_objects  [get_files D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.srcs/sources_1/imports/Sources/Parameterized_Ping_Pong_Counter_t.v] -no_script -reset -force -quiet
+remove_files  D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.srcs/sources_1/imports/Sources/Parameterized_Ping_Pong_Counter_t.v
+import_files -norecurse D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/Lab3_FinalFiles/Lab3_Team10_Parameterized_Ping_Pong_Counter_fpga.v
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+set_property IOSTANDARD LVCMOS33 [get_ports [list {an[3]} {an[2]} {an[1]} {an[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {max[3]} {max[2]} {max[1]} {max[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {min[3]} {min[2]} {min[1]} {min[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {num[3]} {num[2]} {num[1]} {num[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {out[6]} {out[5]} {out[4]} {out[3]} {out[2]} {out[1]} {out[0]}]]
+place_ports clk W5
+place_ports enable R2
+place_ports flip U17
+place_ports flip_db_op E19
+place_ports not_rst_n_dp_op U16
+place_ports rst_n T18
+set_property IOSTANDARD LVCMOS33 [get_ports [list clk]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list enable]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list flip]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list flip_db_op]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list not_rst_n_dp_op]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list rst_n]]
+place_ports {an[3]} W4
+place_ports {an[2]} V4
+place_ports {an[1]} U4
+place_ports {an[0]} U2
+place_ports {max[3]} T1
+place_ports {max[2]} U1
+place_ports {max[1]} W2
+place_ports {max[0]} R3
+place_ports {min[3]} T2
+place_ports {min[2]} T3
+place_ports {min[1]} V2
+place_ports {min[0]} W14
+place_ports {min[0]} W13
+place_ports {num[3]} L1
+place_ports {num[2]} P1
+place_ports {num[1]} N3
+place_ports {num[0]} P3
+place_ports {out[6]} W7
+place_ports {out[5]} W6
+place_ports {out[4]} U8
+place_ports {out[3]} V8
+place_ports {out[2]} U5
+place_ports {out[1]} V5
+place_ports {out[0]} U7
+file mkdir D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.srcs/constrs_1/new
+close [ open D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.srcs/constrs_1/new/cons.xdc w ]
+add_files -fileset constrs_1 D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.srcs/constrs_1/new/cons.xdc
+set_property target_constrs_file D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.srcs/constrs_1/new/cons.xdc [current_fileset -constrset]
+save_constraints -force
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+close_design
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/impl_1/FPGA_Display.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/impl_1/FPGA_Display.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/impl_1/FPGA_Display.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/impl_1/FPGA_Display.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/impl_1/FPGA_Display.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_run synth_1 -name synth_1
+close_design
+open_run synth_1 -name synth_1
+close_design
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/impl_1/FPGA_Display.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/impl_1/FPGA_Display.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/impl_1/FPGA_Display.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/impl_1/FPGA_Display.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+set_property IOSTANDARD LVCMOS33 [get_ports [list flip_db_op_longer]]
+place_ports flip_db_op_longer E19
+save_constraints
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab3/AQ3_finaltesting/AQ3_finaltesting.runs/impl_1/FPGA_Display.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
