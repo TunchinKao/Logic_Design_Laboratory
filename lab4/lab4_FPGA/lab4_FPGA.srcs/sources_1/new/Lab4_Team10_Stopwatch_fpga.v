@@ -4,13 +4,14 @@ module Stopwatch(clk, push_bottom, reset_bottom, out, an);
 input clk, push_bottom, reset_bottom;
 output [7:0]out;
 output [3:0]an;
-
+reg [7:0]out;
+reg [3:0]an;
 wire p_bottom_db, r_bottom_db;
 wire minute, second, sec_onetenth;
 wire clk_onesecdiv10;
 
 debounce db_push_bottom(.bottom(push_bottom), .out(p_bottom_db), .clk(clk));
-debounce db_reset_bottom(.bottom(reset_bottom, .out(r_bottom_db), .clk(clk));
+debounce db_reset_bottom(.bottom(reset_bottom), .out(r_bottom_db), .clk(clk));
 
 wire resetsignal, sp_signal; // sp -> start and pause
 one_pulse gene_sp_signal(.in(p_bottom_db), .out(sp_signal), .clk(clk));
@@ -32,8 +33,8 @@ wire [4:0] sec1;
 wire [4:0] sec2;
 wire [3:0] secdiv10;
 
-counterup countit(  .clk(clk), .r_signal(n_resetsignal), .sp_signal(sp_signal_ex), 
-                    ,.min(min), .sec(sec), .secdiv10(secdiv10));
+counterup countit(.clk(clk), .r_signal(n_resetsignal), .sp_signal(sp_signal_ex)
+        ,.min(min), .sec1(sec1), .sec2(sec2), .secdiv10(secdiv10));
 
 wire clk_216;
 
@@ -41,10 +42,10 @@ Clock_Divider_216 cd216(clk, clk_216);
 always @ (posedge clk_216) begin
         an[3:0] <= {an[0], an[3:1]};
         case (an) 
-        4'b1110:
+        4'b1110: // atually 0111
         begin 
             out[7] <= 1'b1;
-            case (secdiv10)
+            case (min)
             4'b0000: out[6:0] <= 7'b000_0001;
             4'b0001: out[6:0] <= 7'b100_1111;
             4'b0010: out[6:0] <= 7'b001_0010;
@@ -58,11 +59,10 @@ always @ (posedge clk_216) begin
             default : out[6:0] <= 7'b101_1111;
             endcase
         end
-        4'b0111:     
+        4'b0111:  //atually 1011
         begin 
             out[7] <= 1'b1;
-            an <= 4'b0111;
-            case (min)
+            case (sec1)
             4'b0000: out[6:0] <= 7'b000_0001;
             4'b0001: out[6:0] <= 7'b100_1111;
             4'b0010: out[6:0] <= 7'b001_0010;
@@ -78,9 +78,9 @@ always @ (posedge clk_216) begin
         end
         4'b1011:
         begin 
-            out[7] <= 1'b1;
-            an <= 4'b0111;
-            case ()
+            out[7] <= 1'b0;
+            // an <= 4'b0111;
+            case (sec2)
             4'b0000: out[6:0] <= 7'b000_0001;
             4'b0001: out[6:0] <= 7'b100_1111;
             4'b0010: out[6:0] <= 7'b001_0010;
@@ -96,9 +96,9 @@ always @ (posedge clk_216) begin
         end
         4'b1101:
         begin 
-            out[7] <= 1'b0;
-            an <= 4'b0111;
-            case ()
+            out[7] <= 1'b1;
+            // an <= 4'b0111;
+            case (secdiv10)
             4'b0000: out[6:0] <= 7'b000_0001;
             4'b0001: out[6:0] <= 7'b100_1111;
             4'b0010: out[6:0] <= 7'b001_0010;
@@ -114,7 +114,7 @@ always @ (posedge clk_216) begin
         end
         default : an <= 4'b1110;
         endcase
-    end
+    
 end
 
 endmodule
@@ -123,7 +123,7 @@ endmodule
 
 
 module counterup(clk, r_signal, sp_signal, min, sec1, sec2, secdiv10);
-input clk, reset;
+input clk, r_signal, sp_signal;
 output min, sec1, sec2, secdiv10;
 
 reg [3:0]min, next_min;
@@ -131,34 +131,37 @@ reg [3:0]sec1, sec2, next_sec1 , next_sec2;
 reg [3:0]onetenthsec, next_onetenthsec;
 wire [1:0]state;
 wire sec_div10_clk;
-parameter COUNT 2'b01;
-parameter WAIT 2'b10;
-parameter RESET 2'b00;
+parameter COUNT = 2'b01;
+parameter WAIT = 2'b10;
+parameter RESET = 2'b00;
 
-state_transition setup( .start_pause(sp_signal)
-                        .reset(r_signal)
-                        .clk(clk). state(state));
+state_transition setup( .start_pause(sp_signal),
+                        .reset(r_signal),
+                        .clk(clk), . state(state));
 
 clksecdiv_10 gene_onetensec(.clk(clk), .clk_10(sec_div10_clk));
 
 always @(posedge clk)begin
     if(sec_div10_clk == 1'b1) begin
         case(state)
-        COUNT:
+        COUNT: begin
             min <= next_min;
             sec1 <= next_sec1;
             sec2 <= next_sec2;
             onetenthsec <= next_onetenthsec;
-        WAIT:
+        end
+        WAIT: begin
             min <= min;
             sec1 <= sec1;
             sec2 <= sec2;
             onetenthsec <= onetenthsec;
-        RESET:
+        end
+        RESET:begin
             min <= 4'd0;
             sec1 <= 4'd0;
             sec2 <= 4'd0;
             onetenthsec <= 4'd0;
+        end
         endcase
     end else begin
         min <= min;
@@ -168,7 +171,7 @@ always @(posedge clk)begin
     end
 end
 
-// 59 等等的還要處理
+// 59 等�?��?��?��?��?��??
 
 always @(*)begin
     if(sec1 == 4'd5 && sec2 == 4'd9 && onetenthsec == 4'd9)
@@ -202,9 +205,9 @@ module state_transition(start_pause, reset, clk, state);
 input start_pause, reset, clk;
 output [1:0]state;
 
-parameter COUNT 2'b01;
-parameter WAIT 2'b10;
-parameter RESET 2'b00;
+parameter COUNT = 2'b01;
+parameter WAIT = 2'b10;
+parameter RESET = 2'b00;
 
 reg [1:0] state, next_state;
 
@@ -264,9 +267,9 @@ endmodule
 module one_pulse(in, out, clk);
 input in, clk;
 output out;    
-reg in;
-reg in_delay;
 
+reg in_delay;
+reg o_p;
 always @(posedge clk)begin
     o_p <= in & (!in_delay);
     in_delay <= in;
