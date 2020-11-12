@@ -114,7 +114,6 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
 
 OPTRACE "Implementation" START { ROLLUP_1 }
 OPTRACE "Phase: Write Bitstream" START { ROLLUP_AUTO }
@@ -124,7 +123,6 @@ set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
   set_param chipscope.maxJobs 4
-  set_param xicom.use_bs_reader 1
   open_checkpoint Stopwatch_routed.dcp
   set_property webtalk.parent_dir D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab4/lab4_FPGA/lab4_FPGA.cache/wt [current_project]
 set_property TOP Stopwatch [current_fileset]

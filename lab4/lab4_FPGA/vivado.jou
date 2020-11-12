@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# Vivado v2020.1.1 (64-bit)
+# SW Build 2960000 on Wed Aug  5 22:57:20 MDT 2020
+# IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020
+# Start of session at: Thu Nov 12 11:24:18 2020
+# Process ID: 19236
+# Current directory: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab4/lab4_FPGA
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11328 D:\Computer_Programming\Logic_Designer\LogicDesignLAB\lab4\lab4_FPGA\lab4_FPGA.xpr
+# Log file: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab4/lab4_FPGA/vivado.log
+# Journal file: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab4/lab4_FPGA\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab4/lab4_FPGA/lab4_FPGA.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1

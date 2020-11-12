@@ -1,25 +1,28 @@
 `timescale 1ns / 1ps
 
 module Stopwatch(clk, push_bottom, reset_bottom, out, an, 
-                r_signal_ex, sp_signal_ex, state, clk_10);
+                r_signal_ex, sp_signal_ex, state, clk_10
+                , push_bottom_out, reset_bottom_out);
 input clk, push_bottom, reset_bottom;
 output [7:0]out;
 output [3:0]an;
 output [1:0]state;
 output clk_10;
 output r_signal_ex, sp_signal_ex;
+output push_bottom_out, reset_bottom_out;
+
 reg [7:0]out;
 reg [3:0]an;
-wire p_bottom_db, r_bottom_db;
 wire minute, second, sec_onetenth;
 wire clk_onesecdiv10;
 
+wire p_bottom_db, r_bottom_db;
 debounce db_push_bottom(.bottom(push_bottom), .out(p_bottom_db), .clk(clk));
 debounce db_reset_bottom(.bottom(reset_bottom), .out(r_bottom_db), .clk(clk));
 
 wire resetsignal, sp_signal; // sp -> start and pause
-one_pulse gene_sp_signal(.in(p_bottom_db), .out(sp_signal), .clk(clk));
-one_pulse gene_re_signal(.in(r_bottom_db), .out(resetsignal), .clk(clk));
+one_pulse gene_sp_signal(.in(p_bottom_db), .o_p(sp_signal), .clk(clk));
+one_pulse gene_re_signal(.in(r_bottom_db), .o_p(resetsignal), .clk(clk));
 
 wire r_signal_ex, sp_signal_ex;
 
@@ -31,6 +34,10 @@ Extend extend_sp_signal(.clk(clk), .in(sp_signal), .out(sp_signal_ex));
 wire n_resetsignal;
 
 not gene_reset(n_resetsignal, r_signal_ex);
+
+assign push_bottom_out = push_bottom;
+assign reset_bottom_out = reset_bottom;
+
 
 wire [3:0] min;
 wire [3:0] sec1;
@@ -141,7 +148,9 @@ parameter RESET = 2'b11;
 
 state_transition setup( .start_pause(sp_signal),
                         .reset(r_signal),
-                        .clk(clk), .state(state));
+                        .clk(clk), .state(state),
+                    .min(min), .sec1(sec1), .sec2(sec2), .secdiv10(secdiv10)    
+                    );
 
 clksecdiv_10 gene_onetensec(.clk(clk), .clk_10(sec_div10_clk));
 // Clock_Divider_216 geneclkdiv(.clk(clk), .clk1_2_16(sec_div10_clk));
@@ -209,10 +218,12 @@ end
 
 endmodule
 
-module state_transition(start_pause, reset, clk, state);
+module state_transition(start_pause, reset, clk, state,
+                        min, sec1, sec2, secdiv10);
 input start_pause, reset, clk;
+input min, sec1, sec2, secdiv10;
 output [1:0]state;
-
+wire [3:0] min, sec1, sec2, secdiv10;
 parameter COUNT = 2'b01;
 parameter WAIT = 2'b10;
 parameter RESET = 2'b11;
@@ -240,20 +251,21 @@ end
 always @(*)begin
     case (state)
         COUNT:
-            if(start_pause == 1'b1)
-                next_state = WAIT;
-            else
-                next_state = COUNT;
+            if(min == 4'd9 && sec1 == 4'd5 && sec2 == 4'd9 && secdiv10 == 4'd9)
+                next_state = RESET;
+            else begin
+                if(start_pause == 1'b1)
+                    next_state = WAIT;
+                else
+                    next_state = COUNT;
+            end      
         WAIT:
             if(start_pause == 1'b1)
                 next_state = COUNT;
             else
                 next_state = WAIT;
         RESET:
-            if(start_pause == 1'b1)
-                next_state = COUNT;
-            else
-                next_state = RESET;
+            next_state = WAIT;
     default:
         next_state = RESET;
     endcase
@@ -274,9 +286,9 @@ assign out = (cnt[3:0] == 4'b1111 ? 1'b1 : 1'b0);
 
 endmodule
 
-module one_pulse(in, out, clk);
+module one_pulse(in, o_p, clk);
 input in, clk;
-output out;    
+output o_p;    
 
 reg in_delay;
 reg o_p;
@@ -292,7 +304,7 @@ module Extend(clk, in, out);
 input clk, in;
 output out;
 
-reg [24:0] cnt;
+reg [25:0] cnt, next_cnt;
 
 parameter conNum = 26'd10000000;
 
@@ -300,16 +312,22 @@ always @(posedge clk)begin
     if(in == 1'b1 && cnt == 26'd0)begin
         cnt <= cnt + 1'b1;
     end
-    else if(cnt != conNum)begin
-        cnt <= cnt + 1'b1;
+    else if(cnt != 26'd0)begin
+        cnt <= next_cnt;
     end
     else begin
         cnt <= 26'd0;
     end      
 end
 
+always @(*)begin
+    if(cnt == conNum - 1)
+        next_cnt = 26'd0;
+    else
+        next_cnt = cnt + 1'b1;
+end
 
-assign out = (cnt == 25'd0 ? 1'b0 : 1'b1);
+assign out = (cnt == 26'd0 ? 1'b0 : 1'b1);
 
 endmodule
 
@@ -324,10 +342,10 @@ parameter conNum = 26'd10000000;
 always @(negedge clk)begin
     cnt <= next_cnt;
     if(cnt == conNum - 1'b1)
-        clk_10 <= !clk_10;
-        // clk_10 <= 1'b1;
-    // else
-    //     clk_10 <= 1'b0;
+        // clk_10 <= !clk_10;
+        clk_10 <= 1'b1;
+    else
+        clk_10 <= 1'b0;
 end
 
 always @(*)begin
