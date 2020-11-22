@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="126250fs"></ZoomStartTime>
+      <ZoomEndTime time="260351fs"></ZoomEndTime>
+      <Cursor1Time time="230000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="174"></NameColumnWidth>
+      <ValueColumnWidth column_width="84"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="14" />
+   <wvobject fp_name="/tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/rst_n" type="logic">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/lr_has_car" type="logic">
+      <obj_property name="ElementShortName">lr_has_car</obj_property>
+      <obj_property name="ObjectShortName">lr_has_car</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/cnt" type="array">
+      <obj_property name="ElementShortName">cnt[3:0]</obj_property>
+      <obj_property name="ObjectShortName">cnt[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/hw_light" type="array">
+      <obj_property name="ElementShortName">hw_light[2:0]</obj_property>
+      <obj_property name="ObjectShortName">hw_light[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/lr_light" type="array">
+      <obj_property name="ElementShortName">lr_light[2:0]</obj_property>
+      <obj_property name="ObjectShortName">lr_light[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/isashimaState" type="array">
+      <obj_property name="ElementShortName">isashimaState[2:0]</obj_property>
+      <obj_property name="ObjectShortName">isashimaState[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/cnts" type="array">
+      <obj_property name="ElementShortName">cnts[63:0]</obj_property>
+      <obj_property name="ObjectShortName">cnts[63:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/HW_go" type="array">
+      <obj_property name="ElementShortName">HW_go[2:0]</obj_property>
+      <obj_property name="ObjectShortName">HW_go[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/HW_wait" type="array">
+      <obj_property name="ElementShortName">HW_wait[2:0]</obj_property>
+      <obj_property name="ObjectShortName">HW_wait[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/Going_toLR" type="array">
+      <obj_property name="ElementShortName">Going_toLR[2:0]</obj_property>
+      <obj_property name="ObjectShortName">Going_toLR[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/LR_go" type="array">
+      <obj_property name="ElementShortName">LR_go[2:0]</obj_property>
+      <obj_property name="ObjectShortName">LR_go[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/LR_wait" type="array">
+      <obj_property name="ElementShortName">LR_wait[2:0]</obj_property>
+      <obj_property name="ObjectShortName">LR_wait[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/Going_toHW" type="array">
+      <obj_property name="ElementShortName">Going_toHW[2:0]</obj_property>
+      <obj_property name="ObjectShortName">Going_toHW[2:0]</obj_property>
+   </wvobject>
+</wave_config>
