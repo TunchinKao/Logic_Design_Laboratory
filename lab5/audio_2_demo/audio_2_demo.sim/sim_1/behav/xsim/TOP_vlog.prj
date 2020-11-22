@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../audio_2_demo.srcs/sources_1/imports/Unit9_demo2_music box/Music.v" \
+"../../../../audio_2_demo.srcs/sources_1/imports/Unit9_demo2_music box/PWM.v" \
+"../../../../audio_2_demo.srcs/sources_1/imports/Unit9_demo2_music box/PlayerCtrl.v" \
+"../../../../audio_2_demo.srcs/sources_1/imports/Unit9_demo2_music box/TOP.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
