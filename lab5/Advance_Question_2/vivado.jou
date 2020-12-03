@@ -1,0 +1,42 @@
+#-----------------------------------------------------------
+# Vivado v2020.1.1 (64-bit)
+# SW Build 2960000 on Wed Aug  5 22:57:20 MDT 2020
+# IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020
+# Start of session at: Thu Nov 26 17:53:42 2020
+# Process ID: 3668
+# Current directory: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab5/Advance_Question_2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent25292 D:\Computer_Programming\Logic_Designer\LogicDesignLAB\lab5\Advance_Question_2\Advance_Question_2.xpr
+# Log file: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab5/Advance_Question_2/vivado.log
+# Journal file: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab5/Advance_Question_2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab5/Advance_Question_2/Advance_Question_2.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+source tb.tcl
+close_sim
+launch_simulation
+source tb.tcl
+close_sim
+launch_simulation
+source tb.tcl
+close_sim
+launch_simulation
+source tb.tcl
+close_sim
+launch_simulation
+source tb.tcl
+close_sim
+launch_simulation
+source tb.tcl
+set_property -name {xsim.simulate.runtime} -value {50000ns} -objects [get_filesets sim_1]
+close_sim
+launch_simulation
+source tb.tcl
+close_sim
+launch_simulation
+source tb.tcl
+close_sim

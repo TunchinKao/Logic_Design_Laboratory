@@ -1,6 +1,19 @@
 `timescale 1ns/1ps
+module Traffic_Light_Controller (clk, rst_n, lr_has_car, hw_light, lr_light);
+input clk, rst_n;
+input lr_has_car;
+output [3-1:0] hw_light;
+output [3-1:0] lr_light;
+wire [3-1:0] state;
 
-module Traffic_Light_Controller (clk, rst_n, lr_has_car, hw_light, lr_light, state, cnt);
+light_control lc(.state(state), .hw_light(hw_light), .lr_light(lr_light));
+state_control sc(.clk(clk), .rst_n(rst_n), .lr_has_car(lr_has_car), .state(state)
+                ,.cnt(cnt));
+
+endmodule
+
+
+module Traffic_Light_Controller_test (clk, rst_n, lr_has_car, hw_light, lr_light, state, cnt);
 input clk, rst_n;
 input lr_has_car;
 output [3-1:0] hw_light;
@@ -12,7 +25,6 @@ wire [3-1:0] state;
 light_control lc(.state(state), .hw_light(hw_light), .lr_light(lr_light));
 state_control sc(.clk(clk), .rst_n(rst_n), .lr_has_car(lr_has_car), .state(state)
                 ,.cnt(cnt));
-
 
 endmodule
 
@@ -35,9 +47,11 @@ always @(posedge clk)begin
     if(rst_n == 1'b0)begin
         state <= HW_go;
         cnt <= 64'd0;
+        flag <= 1'b0;
     end else begin
         if(state == next_state)
             cnt <= cnt + 1'b1;
+            flag <= 1'b0;
         else
             cnt <= 64'd0;
             state <= next_state;
@@ -48,44 +62,38 @@ end
 
 
 always @(*)begin
-
 case (state)
     HW_go :
-        if((cnt >= 64'd2 || flag == 1'b1) && lr_has_car == 1'b1)begin
+        if((cnt >= 64'd34 || flag == 1'b1) && lr_has_car == 1'b1)begin
             next_state = HW_wait;
         end else begin
             next_state = HW_go;
         end
-
     HW_wait:
-        if(cnt >= 64'd1)begin
+        if(cnt >= 64'd14)begin
             next_state = Going_toLR;
         end else begin
             next_state = HW_wait;
         end
-    Going_toLR:
-        
+    Going_toLR:        
         if(cnt >= 64'd0)begin
             next_state = LR_go;
         end else begin
             next_state = Going_toLR;
         end
-    LR_go:
-    
-        if(cnt >= 64'd2)begin
+    LR_go:    
+        if(cnt >= 64'd34)begin
             next_state = LR_wait;
         end else begin
             next_state = LR_go;
         end
-    LR_wait:
-        
-        if(cnt >= 64'd1)begin
+    LR_wait:        
+        if(cnt >= 64'd14)begin
             next_state = Going_toHW;
         end else begin
             next_state = LR_wait;
         end
-    Going_toHW: 
-        
+    Going_toHW:         
         if(cnt >= 64'd0)begin
             next_state = HW_go;
         end else begin
@@ -120,37 +128,30 @@ always@(*)begin
     
 case (state)
     HW_go : begin
-        
         hw_light = Green;
         lr_light = Red;
     end
     HW_wait:begin
-        
         hw_light = Yellow;
         lr_light = Red;
     end
     Going_toLR:begin
-        
         hw_light = Red;
         lr_light = Red;
     end
     LR_go:begin
-        
         hw_light = Red;
         lr_light = Green;
     end
-    LR_wait:begin
-        
+    LR_wait:begin        
         hw_light = Red;
         lr_light = Yellow;
     end
-    Going_toHW:begin
-        
+    Going_toHW:begin        
         hw_light = Red;
         lr_light = Red;
     end 
     default:begin
-        
         hw_light = Green;
         lr_light = Green; 
     end

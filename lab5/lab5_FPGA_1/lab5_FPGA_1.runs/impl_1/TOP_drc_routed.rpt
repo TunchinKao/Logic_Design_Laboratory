@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1.1 (win64) Build 2960000 Wed Aug  5 22:57:20 MDT 2020
-| Date         : Mon Nov 23 23:37:16 2020
+| Date         : Thu Nov 26 00:24:11 2020
 | Host         : LAPTOP-J5R9FCMI running 64-bit major release  (build 9200)
 | Command      : report_drc -file TOP_drc_routed.rpt -pb TOP_drc_routed.pb -rpx TOP_drc_routed.rpx
 | Design       : TOP
@@ -24,28 +24,17 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 5
-+--------+----------+--------------------------+------------+
-| Rule   | Severity | Description              | Violations |
-+--------+----------+--------------------------+------------+
-| BUFC-1 | Warning  | Input Buffer Connections | 2          |
-| DPIP-1 | Warning  | Input pipelining         | 1          |
-| DPOP-1 | Warning  | PREG Output pipelining   | 1          |
-| DPOP-2 | Warning  | MREG Output pipelining   | 1          |
-+--------+----------+--------------------------+------------+
+             Violations found: 3
++--------+----------+------------------------+------------+
+| Rule   | Severity | Description            | Violations |
++--------+----------+------------------------+------------+
+| DPIP-1 | Warning  | Input pipelining       | 1          |
+| DPOP-1 | Warning  | PREG Output pipelining | 1          |
+| DPOP-2 | Warning  | MREG Output pipelining | 1          |
++--------+----------+------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
-BUFC-1#1 Warning
-Input Buffer Connections  
-Input buffer key_de/inst/inst/Ps2Interface_i/IOBUF_inst_0/IBUF (in key_de/inst/inst/Ps2Interface_i/IOBUF_inst_0 macro) has no loads. It is recommended to have an input buffer drive an internal load.
-Related violations: <none>
-
-BUFC-1#2 Warning
-Input Buffer Connections  
-Input buffer key_de/inst/inst/Ps2Interface_i/IOBUF_inst_1/IBUF (in key_de/inst/inst/Ps2Interface_i/IOBUF_inst_1 macro) has no loads. It is recommended to have an input buffer drive an internal load.
-Related violations: <none>
-
 DPIP-1#1 Warning
 Input pipelining  
 DSP pwm_0/count_duty0 input pwm_0/count_duty0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.

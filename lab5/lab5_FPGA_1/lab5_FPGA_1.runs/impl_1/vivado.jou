@@ -2,8 +2,8 @@
 # Vivado v2020.1.1 (64-bit)
 # SW Build 2960000 on Wed Aug  5 22:57:20 MDT 2020
 # IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020
-# Start of session at: Mon Nov 23 23:36:00 2020
-# Process ID: 37896
+# Start of session at: Thu Nov 26 00:24:31 2020
+# Process ID: 19152
 # Current directory: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab5/lab5_FPGA_1/lab5_FPGA_1.runs/impl_1
 # Command line: vivado.exe -log TOP.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source TOP.tcl -notrace
 # Log file: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab5/lab5_FPGA_1/lab5_FPGA_1.runs/impl_1/TOP.vdi

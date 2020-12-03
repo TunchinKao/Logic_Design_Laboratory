@@ -1,5 +1,7 @@
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab5/Advance_Question_2/Advance_Question_2.srcs/sources_1/imports/lab5/Lab5_TeamX_Traffic_Light_Controller.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Traffic_Light_Controller
+INFO: [VRFC 10-2458] undeclared symbol cnt, assumed default net type wire [D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab5/Advance_Question_2/Advance_Question_2.srcs/sources_1/imports/lab5/Lab5_TeamX_Traffic_Light_Controller.v:11]
+INFO: [VRFC 10-311] analyzing module Traffic_Light_Controller_test
 INFO: [VRFC 10-311] analyzing module state_control
 INFO: [VRFC 10-311] analyzing module light_control
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab5/Advance_Question_2/Advance_Question_2.srcs/sources_1/new/tb.v" into library xil_defaultlib
