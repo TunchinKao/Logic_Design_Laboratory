@@ -21,6 +21,7 @@ module top(
     );
 
    pixel_gen pixel_gen_inst(
+       .v_cnt(v_cnt),
        .h_cnt(h_cnt),
        .valid(valid),
        .vgaRed(vgaRed),

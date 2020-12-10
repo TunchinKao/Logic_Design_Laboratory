@@ -18,11 +18,11 @@ module vga_controller
     wire [9:0] HD, HF, HS, HB, HT, VD, VF, VS, VB, VT;
 
    
-    assign HD = 640;
-    assign HF = 16;
-    assign HS = 96;
-    assign HB = 48;
-    assign HT = 800; 
+    assign HD = 640;    // Horizon Display
+    assign HF = 16;     // Front porch
+    assign HS = 96;     // Sync pulse
+    assign HB = 48;     // Back porch
+    assign HT = 800;    // Total Time
     assign VD = 480;
     assign VF = 10;
     assign VS = 2;

@@ -1,4 +1,5 @@
 module pixel_gen(
+   input [9:0] v_cnt,
    input [9:0] h_cnt,
    input valid,
    output reg [3:0] vgaRed,
@@ -9,8 +10,13 @@ module pixel_gen(
        always @(*) begin
        if(!valid)
              {vgaRed, vgaGreen, vgaBlue} = 12'h0;
-        else if(h_cnt < 128)
-             {vgaRed, vgaGreen, vgaBlue} = 12'h000;
+        else if(h_cnt < 128)begin
+             if(v_cnt < 240)
+                  {vgaRed, vgaGreen, vgaBlue} = 12'h000;
+             else begin
+                 {vgaRed, vgaGreen, vgaBlue} =12'h878;
+             end        
+        end
         else if(h_cnt < 256)
              {vgaRed, vgaGreen, vgaBlue} = 12'h00f;
         else if(h_cnt < 384)

@@ -1,0 +1,11 @@
+{
+    "cSpell.words": [
+        "default",
+        "hsync",
+        "posedge",
+        "vsync"
+    ],
+    "cSpell.ignoreWords": [
+        "pclk"
+    ]
+}

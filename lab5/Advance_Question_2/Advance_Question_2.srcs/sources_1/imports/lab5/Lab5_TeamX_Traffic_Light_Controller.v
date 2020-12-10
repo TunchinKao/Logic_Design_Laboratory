@@ -49,10 +49,10 @@ always @(posedge clk)begin
         cnt <= 64'd0;
         flag <= 1'b0;
     end else begin
-        if(state == next_state)
+        if(state == next_state) begin
             cnt <= cnt + 1'b1;
-            flag <= 1'b0;
-        else
+            flag <= 1'b0;end
+        else 
             cnt <= 64'd0;
             state <= next_state;
             if(cnt >= 64'd35 && ~flag)
