@@ -50,11 +50,14 @@ module top(clk, rst_n, request, valid, seven_seg, notice_slave, AN, data_in, ack
     wire db_rst_n, op_rst_n;
     assign rst_n_inv = ~op_rst_n;
     assign AN = 4'b1110;
+    // button part
     debounce db_0(.pb_debounced(db_rst_n), .pb(rst_n), .clk(clk));
     onepulse op_0(.pb_debounced(db_rst_n), .clock(clk), .pb_one_pulse(op_rst_n));
+    // control part
     slave_control sl_ctrl_0(.clk(clk), .rst_n(rst_n_inv), .request(request),
      .ack(ack), .data_in(data_in), .notice(notice_slave), .valid(valid),
       .data(slave_data_o), .state(state));
+    // display part
     decoder dec0(.in(slave_data_o), .out(slave_data_dec));
     seven_segment dis_0(.in(slave_data_dec), .out(seven_seg));
 

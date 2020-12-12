@@ -32,6 +32,8 @@ module master_control(clk, rst_n, request, ack, data_in, notice, data, valid, re
     output reg [3-1:0] data;
     output reg valid;
     output [3-1:0] state;
+    // --self
+//    input wire [3-1:0] decode_data;
     parameter state_wait_rqst = 3'b000;  // wait for user to push btn to send request to slave.
     parameter state_wait_ack  = 3'b001;  // request sent, wait for slave to respond with an ack, if no act is received, keep sending request2s
     parameter state_wait_to_send_data = 3'b100; //illuminate leftmost LED on the board for one sec indicating ack has been recieved

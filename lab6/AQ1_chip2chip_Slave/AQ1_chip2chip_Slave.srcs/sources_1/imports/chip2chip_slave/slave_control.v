@@ -45,11 +45,11 @@ module slave_control(clk, rst_n, request, ack, data_in, notice, valid, data, sta
 
     always@(posedge clk) begin
         if (rst_n == 0) begin
-            state = state_wait_rqst;
-            notice = 0;
-            ack = 0;
-            data = 0;
-            start = 0;
+            state <= state_wait_rqst;
+            notice <= 0;
+            ack <= 0;
+            data <= 0;
+            start <= 0;
         end
         else begin
             state <= next_state;
@@ -69,24 +69,24 @@ module slave_control(clk, rst_n, request, ack, data_in, notice, valid, data, sta
         case(state)
             state_wait_rqst: begin
                 next_state = (request == 1)? state_wait_to_send_ack: state_wait_rqst;
-                // next_notice = ???
-                // next_ack = ???
-                // next_data = ???
-                // next_start = (request == 1)? ???: ???;
+                next_notice = 1'b0;
+                next_ack = 1'b0;
+                next_data = data;
+                next_start = (request == 1)? 1'b1: 1'b0;
             end
             state_wait_to_send_ack: begin
-                // next_state = (done == 1)? ??? : ???;
-                // next_notice = ???
-                // next_ack = ???
-                // next_data = ???
-                // next_start = ???
+                next_state = (done == 1)? state_wait_data : state_wait_to_send_ack;
+                next_notice = (done == 1) ? 1'b0 : 1'b1;
+                next_ack = (done == 1) ? 1'b1 : 1'b0;
+                next_data = data;
+                next_start = (done == 1'b1) ?  1'b0 : 1'b1;
             end
             state_wait_data: begin
-                // next_state = (valid == 1)? ??? : ???;
-                // next_notice = ???
-                // next_ack = ???
-                // next_data = ???
-                // next_start = ???
+                next_state = (valid == 1)? state_wait_rqst : state_wait_data;
+                next_notice = 1'b0;
+                next_ack = (valid == 1) ? 1'b0 : 1'b1;
+                next_data = (valid == 1) ? data_in : data;
+                next_start = 1'b0;
             end
             default: begin
             end

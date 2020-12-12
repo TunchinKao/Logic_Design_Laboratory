@@ -48,7 +48,7 @@ module top(clk, rst_n, in, request, notice_master,
     output [7-1:0] seven_seg;
     output [4-1:0] AN;
 // ------ self I/O
-    output [3-1:0] data;
+    // output [3-1:0] data;
     output wire req_signal;
     output wire reset_signal;
     output wire [3-1:0] state;
@@ -76,7 +76,7 @@ module top(clk, rst_n, in, request, notice_master,
     onepulse op_1(.pb_debounced(db_rst_n), .clock(clk), .pb_one_pulse(op_rst_n));
     // control part
     master_control ms_ctrl_0(.clk(clk), .rst_n(rst_n_inv), .request(op_request), // send
-     .ack(ack), .data_in(data_to_slave), .notice(notice_master), .data(data),
+     .ack(ack), .data_in(data_to_slave), .notice(notice_master), .data(),
       .valid(valid), .request2s(request2s), .state(state));
     
 	// seven_segment part

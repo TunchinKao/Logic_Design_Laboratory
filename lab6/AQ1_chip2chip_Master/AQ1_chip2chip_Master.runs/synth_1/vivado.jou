@@ -2,8 +2,8 @@
 # Vivado v2020.1.1 (64-bit)
 # SW Build 2960000 on Wed Aug  5 22:57:20 MDT 2020
 # IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020
-# Start of session at: Sat Dec 12 12:14:44 2020
-# Process ID: 22408
+# Start of session at: Sat Dec 12 23:40:51 2020
+# Process ID: 3984
 # Current directory: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab6/AQ1_chip2chip_Master/AQ1_chip2chip_Master.runs/synth_1
 # Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
 # Log file: D:/Computer_Programming/Logic_Designer/LogicDesignLAB/lab6/AQ1_chip2chip_Master/AQ1_chip2chip_Master.runs/synth_1/top.vds
