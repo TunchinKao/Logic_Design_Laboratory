@@ -13,38 +13,50 @@ module Top(
 );
 
     wire Rst_n, rst_pb, stop;
+    wire left_signal_pb, right_signal_pb, mid_signal_pb;
+    wire [1:0] motor_speed;
     debounce d0(rst_pb, rst, clk);
     onepulse d1(rst_pb, clk, Rst_n);
 
+    debounce dls(left_signal_pb, rst, clk);
+    debounce drs(right_signal_pb, rst, clk);
+    debounce dms(mid_signal_pb, rst, clk);
+
+
+
     motor A(
-        .clk(),
-        .rst(),
+        .clk(clk),
+        .rst(Rst_n),
         //.mode(),
-        .pwm()
+        .pwm(motor_speed)
     );
 
     sonic_top B(
-        .clk(), 
-        .rst(), 
-        .Echo(), 
-        .Trig(),
-        .stop()
+        .clk(clk), 
+        .rst(Rst_n), 
+        .Echo(echo), 
+        .Trig(trig),
+        .stop(stop)
     );
     
     tracker_sensor C(
-        .clk(), 
-        .reset(), 
-        .left_signal(), 
-        .right_signal(),
-        .mid_signal(), 
+        .clk(clk), 
+        .reset(Rst_n), 
+        .left_signal(left_signal_pb), 
+        .right_signal(right_signal_pb),
+        .mid_signal(mid_signal_pb), 
         //.state()
        );
 
     always @(*) begin
-        // [TO-DO] Use left and right to set your pwm
-        //if(stop) {left, right} = ???;
-        //else  {left, right} = ???;
+        case (mode)
+            STOP : {left, right} = 4'b0000;
+            GO_STRAIGHT : {left, right} = 4'b1010; 
+            default: 
+        endcase
     end
+
+    assign {left_motor, right_motor} = motor_speed;
 
 endmodule
 

@@ -1,15 +1,15 @@
 module motor(
     input clk,
     input rst,
-    // input [?? :0]mode,
+    input [2:0]mode,
     output  [1:0]pwm
 );
 
     reg [9:0]next_left_motor, next_right_motor;
-    reg [9:0]left_motor, right_motor;
+    reg [9:0]left_motor, right_motor; // 10bit means the power of motor
     wire left_pwm, right_pwm;
 
-    motor_pwm m0(clk, rst, left_motor, left_pwm);
+    motor_pwm m0(clk, rst, left_motor, left_pwm); .// motor_pwm use to generate power of motor
     motor_pwm m1(clk, rst, right_motor, right_pwm);
     
     always@(posedge clk)begin
@@ -23,6 +23,16 @@ module motor(
     end
     
     // [TO-DO] take the right speed for different situation
+
+    always @(*) begin
+        case (mode)
+            STOP : begin
+                next_left_motor = 10'd0;
+                next_right_motor = 10'd0;
+            end 
+            default: 
+        endcase
+    end
 
 
     assign pwm = {left_pwm,right_pwm};
