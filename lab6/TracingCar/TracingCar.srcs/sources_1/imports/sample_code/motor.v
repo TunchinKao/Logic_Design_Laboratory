@@ -1,7 +1,7 @@
 module motor(
     input clk,
     input rst,
-    input [2:0]mode,
+    input [9:0]mode,
     output  [1:0]pwm
 );
 
@@ -24,13 +24,58 @@ module motor(
     
     // [TO-DO] take the right speed for different situation
 
+parameter STOP = 9'd0;
+parameter GO_STRAIGHT_25 = 9'd1;
+parameter GO_STRAIGHT_50 = 9'd2;
+parameter GO_STRAIGHT_75 = 9'd3;
+parameter GO_STRAIGHT_100 = 9'd4;
+parameter GO_BACK_25 = 9'd5;
+parameter GO_BACK_50 = 9'd6;
+parameter GO_BACK_75 = 9'd7;
+parameter GO_BACK_100 = 9'd8;
+parameter TURN_RIGHT_25 = 9'd9;
+parameter TURN_RIGHT_50 = 9'd10;
+parameter TURN_RIGHT_75 = 9'd11;
+parameter TURN_RIGHT_100 = 9'd12;
+parameter TURN_LEFT_25 = 9'd13;
+parameter TURN_LEFT_50 = 9'd14;
+parameter TURN_LEFT_75 = 9'd15;
+parameter TURN_LEFT_100 = 9'd16;
+
     always @(*) begin
         case (mode)
             STOP : begin
                 next_left_motor = 10'd0;
                 next_right_motor = 10'd0;
             end 
+            GO_STRAIGHT_25 :
+            GO_BACK_25 :
+            TURN_LEFT_25 :
+            TURN_RIGHT_25 :
+                next_left_motor = 10'd250;
+                next_left_motor = 10'd250;
+                
+            GO_STRAIGHT_50 :
+            GO_BACK_50 :
+            TURN_LEFT_50 :
+            TURN_RIGHT_50 :
+                next_left_motor = 10'd500;
+                next_left_motor = 10'd500;
+            GO_STRAIGHT_75 :
+            GO_BACK_75 :
+            TURN_LEFT_75 :
+            TURN_RIGHT_75 :
+                next_left_motor = 10'd750;
+                next_left_motor = 10'd750;
+            GO_STRAIGHT_100 :
+            GO_BACK_100 :
+            TURN_RIGHT_100 :
+            TURN_LEFT_100 :
+                next_left_motor = 10'd1000;
+                next_left_motor = 10'd1000;
             default: 
+                next_left_motor = 10'd0;
+                next_left_motor = 10'd0;
         endcase
     end
 
